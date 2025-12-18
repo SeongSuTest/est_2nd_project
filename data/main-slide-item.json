@@ -1,0 +1,274 @@
+{
+  "mainProducts": [
+    {
+      "id": 1,
+      "brand": "TART OPTICAL",
+      "title": "블랙 ARNEL HERITAGE BLACK 50mm 타르트옵티컬 아넬 헤리티지 안경테",
+      "image": "/images/main-slide-item/thumb/img_glass1.jpg",
+      "discountPercent": 0,
+      "price": 395000,
+      "category" : "glass"
+    },
+    {
+      "id": 2,
+      "brand": "TART OPTICAL",
+      "title": "블랙 ARNEL HERITAGE BLACK 48mm 타르트옵티컬 아넬 헤리티지 안경테",
+      "image": "/images/main-slide-item/thumb/img_glass2.jpg",
+      "discountPercent": 0,
+      "price": 395000,
+      "category" :"glass"
+    },
+    {
+      "id": 3,
+      "brand": "TART OPTICAL",
+      "title": "블랙 ARNEL HERITAGE BLACK 46mm 타르트옵티컬 아넬 헤리티지 안경테",
+      "image": "/images/main-slide-item/thumb/img_glass3.jpg",
+      "discountPercent": 0,
+      "price": 395000,
+      "category" : "glass"
+    },
+    {
+      "id": 4,
+      "brand": "TART OPTICAL",
+      "title": "블랙 ARNEL HERITAGE BLACK 44mm 타르트옵티컬 아넬 헤리티지 안경테",
+      "image": "/images/main-slide-item/thumb/img_glass4.jpg",
+      "discountPercent": 0,
+      "price": 395000,
+      "category" : "glass"
+    },
+    {
+      "id": 5,
+      "brand": "TART OPTICAL",
+      "title": "블랙 ARNEL HERITAGE BLACK 42mm 타르트옵티컬 아넬 헤리티지 안경테",
+      "image": "/images/main-slide-item/thumb/img_glass5.jpg",
+      "discountPercent": 0,
+      "price": 395000,
+      "category" : "glass"
+    },
+    {
+      "id": 6,
+      "brand": "TART OPTICAL",
+      "title": "투명 브라운 ARNEL HERITAGE BROWN 45mm 타르트옵티컬 아넬 헤리티지 안경테",
+      "image": "/images/main-slide-item/thumb/img_glass6.jpg",
+      "discountPercent": 0,
+      "price": 395000,
+      "category" : "glass"
+    },
+    {
+      "id": 7,
+      "brand": "TART OPTICAL",
+      "title": "타르트옵티컬 아넬 헤리티지 투명 안경테 ARNEL HERITAGE A3 49mm",
+      "image": "/images/main-slide-item/thumb/img_glass7.jpg",
+      "discountPercent": 0,
+      "price": 395000,
+      "category" : "glass"
+    },
+    {
+      "id": 8,
+      "brand": "TART OPTICAL",
+      "title": "타르트옵티컬 아넬 헤리티지 투명 안경테 ARNEL HERITAGE A21 46mm",
+      "image": "/images/main-slide-item/thumb/img_glass8.jpg",
+      "discountPercent": 0,
+      "price": 395000,
+      "category": "glass"
+    },
+    {
+      "id": 9,
+      "brand": "TART OPTICAL",
+      "title": "투명 그레이 ARNEL HERITAGE GREY 45mm 타르트옵티컬 아넬 헤리티지 안경테",
+      "image": "/images/main-slide-item/thumb/img_glass9.jpg",
+      "discountPercent": 0,
+      "price": 395000,
+      "category": "glass"
+    },
+    {
+      "id": 10,
+      "brand": "TART OPTICAL",
+      "title": "블랙 ARNEL HERITAGE BLACK 45mm 타르트옵티컬 아넬 헤리티지 안경테",
+      "image": "/images/main-slide-item/thumb/img_glass10.jpg",
+      "discountPercent": 0,
+      "price": 395000,
+      "category": "glass"
+    },
+    {
+      "id": 11,
+      "brand": "Ray-Ban",
+      "title": "블랙 RB2016 601/31 59mm DADDY-O 레이밴 대디오 선글라스",
+      "image": "/images/main-slide-item/thumb/img_sun1.jpg",
+      "discountPercent": 20,
+      "price": 158400,
+      "category": "sunglass"
+    },
+    {
+      "id": 12,
+      "brand": "Ray-Ban",
+      "title": "RB4089 601/31 62mm 레이밴 발로라마 선글라스",
+      "image": "/images/main-slide-item/thumb/img_sun2.jpg",
+      "discountPercent": 20,
+      "price": 191200,
+      "category": "sunglass"
+    },
+    {
+      "id": 13,
+      "brand": "Ray-Ban",
+      "title": "블랙 오벌 RB4441D 6677/87 53mm 레이밴 선글라스",
+      "image": "/images/main-slide-item/thumb/img_sun3.jpg",
+      "discountPercent": 20,
+      "price": 172800,
+      "category": "sunglass"
+    },
+    {
+      "id": 14,
+      "brand": "Ray-Ban",
+      "title": "오팔 브라운 오벌 RB4441D 6779/73 53mm 레이밴 선글라스",
+      "image": "/images/main-slide-item/thumb/img_sun4.jpg",
+      "discountPercent": 20,
+      "price": 172800,
+      "category": "sunglass"
+    },
+    {
+      "id": 15,
+      "brand": "Ray-Ban",
+      "title": "레이밴 선글라스 클럽마스터 RB3016 W0365 51mm",
+      "image": "/images/main-slide-item/thumb/img_sun5.jpg",
+      "discountPercent": 20,
+      "price": 204800,
+      "category": "sunglass"
+    },
+    {
+      "id": 16,
+      "brand": "Ray-Ban",
+      "title": "레이밴 클럽마스터 선글라스 RB3016F W0365 55mm RB3016-F",
+      "image": "/images/main-slide-item/thumb/img_sun6.jpg",
+      "discountPercent": 20,
+      "price": 204800,
+      "category": "sunglass"
+    },
+    {
+      "id": 17,
+      "brand": "Ray-Ban",
+      "title": "RB2140F 1407/R5 52mm 레이밴 웨이페어러 선글라스",
+      "image": "/images/main-slide-item/thumb/img_sun7.jpg",
+      "discountPercent": 20,
+      "price": 267200,
+      "category": "sunglass"
+    },
+    {
+      "id": 18,
+      "brand": "Ray-Ban",
+      "title": "하바나 RB4396F 1359/71 57mm 레이밴 워런 선글라스",
+      "image": "/images/main-slide-item/thumb/img_sun8.jpg",
+      "discountPercent": 0,
+      "price": 239000,
+      "category": "sunglass"
+    },
+    {
+      "id": 19,
+      "brand": "Ray-Ban",
+      "title": "블랙 편광 RB4458D 601/9A 65mm 레이밴 선글라스",
+      "image": "/images/main-slide-item/thumb/img_sun9.jpg",
+      "discountPercent": 20,
+      "price": 210400,
+      "category": "sunglass"
+    },
+    {
+      "id": 20,
+      "brand": "Ray-Ban",
+      "title": "편광 RB4392D 601/81 66mm 레이밴 플랫바 선글라스",
+      "image": "/images/main-slide-item/thumb/img_sun10.jpg",
+      "discountPercent": 20,
+      "price": 210400,
+      "category": "sunglass"
+    },
+    {
+      "id": 21,
+      "brand": "STYLE:WORK",
+      "title": "블랙 STYLE3 BK 스타일워크 안경테",
+      "image": "/images/main-slide-item/thumb/img_sale1.jpg",
+      "discountPercent": 50,
+      "price": 39000,
+      "category": "sale"
+    },
+    {
+      "id": 22,
+      "brand": "STYLE:WORK",
+      "title": "투명 IVY LEAGUE C3 49mm 스타일워크 아이비리그 안경테 블루라이트 차단",
+      "image": "/images/main-slide-item/thumb/img_sale2.jpg",
+      "discountPercent": 65,
+      "price": 45000,
+      "category": "sale"
+    },
+    {
+      "id": 23,
+      "brand": "STYLE:WORK",
+      "title": "투명 SLEEK BACK C3 47mm 스타일워크 슬랙백 안경테 블루라이트 차단",
+      "image": "/images/main-slide-item/thumb/img_sale3.jpg",
+      "discountPercent": 65,
+      "price": 45000,
+      "category": "sale"
+    },
+    {
+      "id": 24,
+      "brand": "STYLE:WORK",
+      "title": "블랙 & 실버 메탈 STYLE7 BKSV 스타일워크 하금테 안경테",
+      "image": "/images/main-slide-item/thumb/img_sale4.jpg",
+      "discountPercent": 50,
+      "price": 39000,
+      "category": "sale"
+    },
+    {
+      "id": 25,
+      "brand": "STYLE:WORK",
+      "title": "블랙 STYLE5 BK 스타일워크 안경테",
+      "image": "/images/main-slide-item/thumb/img_sale5.jpg",
+      "discountPercent": 50,
+      "price": 39000,
+      "category": "sale"
+    },
+    {
+      "id": 26,
+      "brand": "VERRIS",
+      "title": "베리스 레쥬렉션 선글라스 RESURRECTION 1",
+      "image": "/images/main-slide-item/thumb/img_sale6.jpg",
+      "discountPercent": 18,
+      "price": 130000,
+      "category": "sale"
+    },
+    {
+      "id": 27,
+      "brand": "VERRIS",
+      "title": "베리스 레쥬렉션 투명 선글라스 RESURRECTION 3",
+      "image": "/images/main-slide-item/thumb/img_sale7.jpg",
+      "discountPercent": 18,
+      "price": 130000,
+      "category": "sale"
+    },
+    {
+      "id": 28,
+      "brand": "STYLE:WORK",
+      "title": "SIDE PART C1 53mm 스타일워크 사이드 파트 선글라스",
+      "image": "/images/main-slide-item/thumb/img_sale8.jpg",
+      "discountPercent": 50,
+      "price": 69000,
+      "category": "sale"
+    },
+    {
+      "id": 29,
+      "brand": "VERRIS",
+      "title": "베리스 레쥬렉션 선글라스 RESURRECTION 5",
+      "image": "/images/main-slide-item/thumb/img_sale9.jpg",
+      "discountPercent": 18,
+      "price": 130000,
+      "category": "sale"
+    },
+    {
+      "id": 30,
+      "brand": "VERRIS",
+      "title": "베리스 아이언2 선글라스 IRON2 C3SG 리미티드",
+      "image": "/images/main-slide-item/thumb/img_sale10.jpg",
+      "discountPercent": 30,
+      "price": 126000,
+      "category": "sale"
+    }
+  ]
+}
