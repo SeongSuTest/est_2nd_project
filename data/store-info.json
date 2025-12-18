@@ -1,0 +1,31 @@
+{
+  "groups": [
+    {
+      "partnerYn": 1,
+      "stores": [
+        {
+          "name": "라운즈 염창역점",
+          "sido": "서울특별시",
+          "sigungu": "강서구",
+          "roadAddress": "공항대로 629 1층 102호",
+          "local": "https://map.naver.com/p/entry/place/1648469407?placePath=%2Fhome",
+          "image": ""
+        }
+      ]
+    },
+
+    {
+      "partnerYn": 0,
+      "stores": [
+        {
+          "name": "더베스트안경 강서등촌",
+          "sido": "서울특별시",
+          "sigungu": "강서구",
+          "roadAddress": "서울특별시 강서구 강서로56길 56, 101동 104~105호",
+          "local": "https://map.naver.com/p/entry/place/11885417?placePath=%2Fhome" ,
+          "image": ""
+        }
+      ]
+    }
+  ]
+}
