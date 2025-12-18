@@ -233,8 +233,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -612,4 +611,18 @@ html {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  height: 48px;
+  line-height: 48px;
+}
+
+.btn-line {
+  border-width: 1px;
+  border-style: solid;
 }/*# sourceMappingURL=common.css.map */
