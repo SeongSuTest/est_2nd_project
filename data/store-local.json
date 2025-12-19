@@ -1,0 +1,26 @@
+{
+  "sidoList": [
+    {
+      "sido": "서울특별시",
+      "sigunguList": [
+        {
+          "sigungu": "종로구"
+        },
+        {
+          "sigungu": "중구"
+        }
+      ]
+    },
+    {
+      "sido": "경기도",
+      "sigunguList": [
+        {
+          "sigungu": "수원시"
+        },
+        {
+          "sigungu": "성남시"
+        }
+      ]
+    }
+  ]
+}

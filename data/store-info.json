@@ -1,0 +1,32 @@
+{
+  "directStores": [
+    {
+      "stores": [
+        {
+          "name": "라운즈 광주충장로점",
+          "sido": "서울특별시",
+          "sigungu": "강서구",
+          "easyRoad": "1호선 문화전당역 3번 출구에서 199m, 충장로 우체국사거리 앞",
+          "roadAddress": "광주광역시 동구 충장로 95-2",
+          "tell": "062-716-1400",
+          "local": "https://map.naver.com/p/entry/place/2021903534?placePath=%2Fhome",
+          "image": "./images/store/1400.jpg"
+        }
+      ]
+    }
+  ],
+  "partnerStores": [
+    {
+      "stores": [
+        {
+          "name": "더베스트안경 강서등촌",
+          "sido": "서울특별시",
+          "sigungu": "강서구",
+          "roadAddress": "서울특별시 강서구 강서로56길 56, 101동 104~105호",
+          "local": "https://map.naver.com/p/entry/place/11885417?placePath=%2Fhome",
+          "image": ""
+        }
+      ]
+    }
+  ]
+}
