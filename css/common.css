@@ -594,12 +594,17 @@ html {
   scroll-behavior: smooth;
   min-width: 250px;
   box-sizing: border-box;
+  font-family: "Pretendard", sans-serif;
 }
 
 .container {
   max-width: 1592px;
-  padding: 0 16px;
   margin: 0 auto;
+}
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 16px;
+  }
 }
 
 .visually-hidden {

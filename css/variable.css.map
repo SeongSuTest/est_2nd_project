@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"version":3,"sourceRoot":"","sources":["../scss/variable.scss"],"names":[],"mappings":"AAAA;AA6BA;AAIA","file":"variable.css"}
+=======
+{"version":3,"sourceRoot":"","sources":["../scss/variable.scss"],"names":[],"mappings":"AAAA;AA4BA;AAIA","file":"variable.css"}
+>>>>>>> origin/main
