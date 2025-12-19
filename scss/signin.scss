@@ -10,10 +10,10 @@ main{
   display: flex;
   flex-direction: column;
   width: 700px;
-  height: 2218px;
   background: #fff;
   padding: 0 50px;
   margin: 0 auto;
+  border-bottom: 1px solid $g50;
   form > h3{
     padding: 27px 0;
   }
@@ -33,21 +33,11 @@ main{
   height: 70px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  padding-right: 120px;
+  justify-content: space-around;
+  padding: 0 100px;
 }
-
 .formList label{
   position: relative;
-}
-.formList dd .hint{
-  position: absolute;
-  color:$g75;
-  padding: 18px 12px;
-  pointer-events: none;
-}
-.hide{   //선택시 hide로 가리기
-  display:none;
 }
 .formList dd:last-child{
   display: flex;
@@ -81,16 +71,17 @@ main{
 .hidden{
   opacity: 0;
   display: inline;
+  position: absolute;
 }
 .active{   // 비밀번호 불일치시
   opacity:1;
   display:block;
   color: $error;
+  position: relative;
 }
 .error{
   color: $error;
 }
-
 .see{
   text-decoration: underline;
   color:$g75;
@@ -99,6 +90,9 @@ main{
   border: 1px solid $g75;
   padding: 0 10px;
   margin-top: 20px;
+  overflow-y: scroll;
+  height: 150px;
+  margin-bottom: 20px;
   div p{
     color: $g100;
   }
@@ -112,13 +106,15 @@ main{
     display: none;
   }
   .top{
-    padding: 13px 0 12px 23px;
+    position: relative;
+    padding: 13px 0 12px 60px;
     border-bottom: 1px solid $g75;
   }
   ul{
+    position: relative;
     padding: 20px 20px 81px 20px;
     li{
-      padding-bottom: 20px;
+      padding: 0 00 20px 40px;
       label{
         color:$g200;
       }
@@ -128,9 +124,21 @@ main{
     }
   }
 }
-.termsList ul li:nth-child(2), li:nth-child(4){
+.termsList ul li:nth-child(2), li:nth-child(5){
   display: flex;
   justify-content: space-between;
+}
+.box{
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: $g50;
+  border-radius: 2px;
+  left:20px;
+  padding: 6px 4px;
+}
+.box .aa{
+  background: $b300;
 }
 .big{
   width: 600px;
