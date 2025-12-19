@@ -160,6 +160,8 @@ body {
 .detail_image_list {display: grid; grid-template-columns: 1fr 1fr; width: 100%; max-width: 800px; gap: 10px; }
 .detail_image_list img {width: 100%; height: auto; display: block; }
 
+.detail_image_list {display: grid; grid-template-columns: 1fr 1fr; width: 100%; max-width: 800px; gap: 10px; }
+
 
 /*리뷰사진..넣어야행*/
 
