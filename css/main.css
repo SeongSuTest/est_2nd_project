@@ -1,1 +1,32 @@
-/*# sourceMappingURL=main.css.map */
+@charset "UTF-8";
+/* Layout */
+/* font */
+/* Text-size styles */
+/* 메인 슬라이드 */
+.slideItemsWrapper {
+  display: grid;
+  grid-template-columns: 252px 1fr;
+  gap: 16px;
+}
+.slideItemsWrapper div {
+  gap: 8px;
+}
+.slideItemsWrapper div p {
+  margin-bottom: 27px;
+}
+
+.slideItems {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  gap: 16px;
+  padding-bottom: 54px;
+}
+
+.slideItems dd:last-child {
+  display: flex;
+  gap: 8px;
+}
+
+.glassDesc dd p {
+  color: #ff2d2d;
+}/*# sourceMappingURL=main.css.map */
