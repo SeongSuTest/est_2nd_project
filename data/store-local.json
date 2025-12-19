@@ -2,12 +2,21 @@
   "sidoList": [
     {
       "sido": "서울특별시",
-      "sigunguList": [
+      "sigunguList": [        
         {
-          "sigungu": "종로구"
+          "sigungu": "강서구"
         },
         {
-          "sigungu": "중구"
+          "sigungu": "강남구"
+        },
+        {
+          "sigungu": "동작구"
+        },
+        {
+          "sigungu": "서초구"
+        },
+        {
+          "sigungu": "중랑구"
         }
       ]
     },
