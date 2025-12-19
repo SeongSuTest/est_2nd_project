@@ -108,18 +108,34 @@ main section {
   display: flex;
   align-items: center;
   gap: 6px;
+  padding-left: 24px;
+  cursor: pointer;
 }
-.store-ct #rounzLens[type=checkbox] + div > span {
-  width: 24px;
+.store-ct #rounzLens[type=checkbox] + .label-checkbox::before {
+  content: "";
   height: 24px;
+  width: 24px;
+  margin-right: -24px;
   background: url("../images/icon_discheck.svg") no-repeat center center/100% auto;
 }
-.store-ct #rounzLens[type=checkbox]:checked + div > span {
+.store-ct #rounzLens[type=checkbox]:checked + .label-checkbox::before {
+  content: "";
+  height: 24px;
+  width: 24px;
   background: url("../images/icon_checked.svg") no-repeat center center/100% auto;
 }
 .store-ct .store-list {
   display: grid;
-  grid-template-columns: repeat(3, 3fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+@media screen and (max-width: 480px) {
+  .store-ct .store-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.store-ct .store-list li {
+  display: grid;
   gap: 16px;
 }
 .store-ct .store-list-img {
@@ -134,6 +150,11 @@ main section {
   left: 0;
   width: 100%;
   height: 100%;
+}
+.store-ct .store-list-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .rounz-lens-chip {
@@ -154,7 +175,27 @@ main section {
 }
 
 .rounz-select select {
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  color: #1e1e1e;
   height: 48px;
   line-height: 48px;
   padding: 0 12px;
+  min-width: 120px;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select {
+  -o-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -moz-appearance: none;
+}
+
+select {
+  background: url("../images/store/icon_arrow_select.png") no-repeat calc(100% - 12px) center/11px auto;
 }/*# sourceMappingURL=store.css.map */

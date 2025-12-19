@@ -1,4 +1,4 @@
-@use "./variable.scss" as *;
+@use "./variable.scss"as *;
 
 main section {
   padding: 54px 0;
@@ -129,21 +129,41 @@ main section {
     display: flex;
     align-items: center;
     gap: 6px;
+    padding-left: $font-h3;
+    cursor: pointer;
   }
 
-  #rounzLens[type="checkbox"]+div>span {
-  width: $font-h3;
-  height: $font-h3;
+  #rounzLens[type="checkbox"]+.label-checkbox::before {
+    content: '';
+    height: $font-h3;
+    width: $font-h3;
+    margin-right: -$font-h3;
     background: url('../images/icon_discheck.svg') no-repeat center center / 100% auto;
   }
 
-  #rounzLens[type="checkbox"]:checked+div>span {
+  #rounzLens[type="checkbox"]:checked+.label-checkbox::before {
+    content: '';
+    height: $font-h3;
+    width: $font-h3;
     background: url('../images/icon_checked.svg') no-repeat center center / 100% auto;
   }
 
   .store-list {
     display: grid;
-    grid-template-columns: repeat(3, 3fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+
+  }
+
+  @media screen and (max-width: 480px) {
+    .store-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+
+  .store-list li {
+    display: grid;
     gap: 16px;
   }
 
@@ -151,7 +171,8 @@ main section {
     position: relative;
     width: 100%;
     height: 0;
-    padding-top: calc(300 / 400 * 100%);;
+    padding-top: calc(300 / 400 * 100%);
+    ;
 
     img {
       position: absolute;
@@ -160,6 +181,14 @@ main section {
       width: 100%;
       height: 100%;
     }
+  }
+
+
+
+  .store-list-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
 
 }
@@ -182,7 +211,27 @@ main section {
 }
 
 .rounz-select select {
+  display: inline-flex;
+  align-items: center;
+  font-size: $body;
+  color: $g400;
   height: 48px;
   line-height: 48px;
   padding: 0 12px;
+  min-width: 120px;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select {
+  -o-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -moz-appearance: none;
+}
+
+select {
+  background: url('../images/store/icon_arrow_select.png') no-repeat calc(100% - 12px) center / 11px auto;
 }

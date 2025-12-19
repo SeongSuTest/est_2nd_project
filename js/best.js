@@ -2,8 +2,9 @@ import { renderHeader } from "./modules/header.js";
 import { renderFooter } from "./modules/footer.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  // renderHeader();
-  // renderFooter();
+  renderHeader();
+  renderFooter();
+
   const ul = document.querySelector("header ul");
 
   function updateMenuClass() {
@@ -23,12 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const button = e.target.closest("button");
     if (!button) return;
 
-    // 기존 active 제거
     menu.querySelectorAll("button.active").forEach((btn) => {
       btn.classList.remove("active");
     });
 
-    // 클릭한 버튼에 active 추가
     button.classList.add("active");
   });
 
@@ -36,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuBtn = document.querySelector(".mobile-menu-button");
 
   menuBtn.addEventListener("click", (e) => {
-    e.preventDefault(); // a태그라서 이동 방지
+    e.preventDefault();
     menuBtn.classList.toggle("active");
     header.classList.toggle("is-menu-open");
   });
