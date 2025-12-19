@@ -110,7 +110,8 @@ html {
 }
 
 .container {
-  width: $container;
+  max-width: $container;
+  padding: 0 16px;
   margin: 0 auto;
 }
 
