@@ -1,76 +1,124 @@
 @use "./variable.scss" as *;
 
-header {
-  position: relative;
-  display: flex;
-  padding: 0 8px 0 23px;
-  height: 54px;
-  align-items: center;
-  border-bottom: 1px solid var(--g500);
-  .rounz-main-logo {
-    img {
-      height: 20px;
+@media (max-width: 1199px) {
+  header {
+    position: relative;
+    display: flex;
+    padding: 0 8px 0 23px;
+    height: 54px;
+    align-items: center;
+    border-bottom: 1px solid $g500;
+
+    .rounz-main-logo {
+      img {
+        height: 20px;
+      }
+    }
+
+    > ul {
+      display: none;
+      position: absolute;
+      top: 54px;
+      left: 0px;
+      background: white;
+      width: 100vw;
+      height: 100vh;
+      li {
+        button {
+          display: flex;
+          padding-left: 24px;
+          align-items: center;
+          background: #f4f4fa;
+          height: 51px;
+          width: 125px;
+        }
+        .active {
+          box-sizing: border-box;
+          padding-left: 21px;
+          color: $b300;
+          border-left: 3px solid $b300;
+        }
+      }
+    }
+
+    &.is-menu-open {
+      > ul {
+        display: block;
+      }
+      .menu-child {
+        display: block;
+      }
+    }
+
+    .header-actions {
+      margin-left: auto;
+      display: flex;
+      a,
+      button {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .cart-button {
+        display: none;
+      }
     }
   }
-  ul {
+
+  .mobile-menu-button {
+    height: 40px;
+    width: 40px;
+    .header-menu-button {
+      display: flex;
+      flex-direction: column;
+      height: 16px;
+      width: 16px;
+      justify-content: space-between;
+      img {
+        width: 16px;
+      }
+    }
+    .header-active-menu-button {
+      display: none;
+      position: relative;
+      height: 12px;
+      width: 12px;
+      img {
+        height: 12px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+    &.active {
+      .header-menu-button {
+        display: none;
+      }
+      .header-active-menu-button {
+        display: block;
+      }
+    }
+  }
+
+  .menu-child {
     display: none;
     position: absolute;
-    top: 55px;
-    left: 0px;
-    background: white;
-    width: 100vw;
-    height: 100vh;
-    li {
-      button {
-        display: flex;
-        padding-left: 24px;
-        align-items: center;
-        background: #f4f4fa;
-        height: 51px;
-        width: 125px;
-      }
-      .active {
-        box-sizing: border-box;
-        padding-left: 21px;
-        color: $b300;
-        border-left: 3px solid $b300;
-      }
-    }
-  }
-  &.is-menu-open {
+    top: 54px;
+    left: 125px;
     ul {
-      display: block; // ✅ 열렸을 때만 표시
-    }
-  }
-  .header-actions {
-    margin-left: auto;
-    display: flex;
-    a,
-    button {
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .cart-button {
-      display: none;
-    }
-  }
-}
-
-.mobile-menu-button {
-  display: block;
-  height: 40px;
-  width: 40px;
-  div {
-    display: flex;
-    flex-direction: column;
-    height: 16px;
-    width: 16px;
-    justify-content: space-between;
-    img {
-      width: 16px;
+      li {
+        height: 51px;
+        width: calc(100vw - 125px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 24px;
+        img {
+          height: 12px;
+        }
+      }
     }
   }
 }
@@ -78,15 +126,40 @@ header {
 @media (min-width: 1200px) {
   header {
     height: 80px;
+    display: flex;
     padding: 0 38px;
+    align-items: center;
+    border-bottom: 1px solid $g500;
     .rounz-main-logo {
       margin-right: 55px;
+      img {
+        height: 24px;
+      }
     }
     ul {
       display: flex;
       gap: 21px;
+      li {
+        button {
+          padding-left: 0px;
+          height: 80px;
+        }
+        .active {
+          color: $b300;
+        }
+      }
     }
     .header-actions {
+      margin-left: auto;
+      display: flex;
+      a,
+      button {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
       .cart-button {
         display: flex;
       }
@@ -94,5 +167,8 @@ header {
     .mobile-menu-button {
       display: none !important;
     }
+  }
+  .menu-child {
+    display: none;
   }
 }

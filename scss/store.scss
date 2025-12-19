@@ -1,0 +1,164 @@
+main section {
+  padding: 54px 0;
+}
+
+.store-head {
+  width: 100%;
+  background: var(--bg);
+
+  >div {
+    display: flex;
+    flex-direction: column;
+    gap: 54px;
+  }
+
+  .store-head-t {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: var(--g500);
+    gap: var(--body);
+  }
+
+  .store-intro {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--body);
+    border-radius: 4px;
+  }
+
+  .store-intro-list {
+    background: var(--white);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--body);
+    flex: 1;
+
+    .h3-tt {
+      color: var(--g400);
+    }
+
+    .body-tt {
+      height: 100%;
+      color: var(--g300)
+    }
+
+    .desc-tt {
+      color: var(--g100);
+
+      .ast {
+        display: inline-block;
+        margin-right: 4px;
+      }
+    }
+
+
+    >.btn {
+      margin-top: 27px;
+      color: var(--b300);
+      border-color: var(--b300);
+      transition: 0.3s;
+
+      &:hover {
+        border-color: var(--b500);
+        color: var(--b500);
+      }
+    }
+  }
+}
+
+.store-ct {
+  >div {
+    padding-bottom: 54px;
+  }
+
+  .store-ct-tab {
+    display: flex;
+    width: 100%;
+
+    .store-tab {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border: solid 1px var(--g50);
+      height: 80px;
+      transition: 0.3s;
+      color: var(--g75);
+
+      &:last-of-type {
+        border-left: none;
+      }
+
+      &:hover {
+        color: var(--b300);
+        border-color: var(--b300);
+      }
+
+      &.active {
+        border-color: var(--b300);
+        background: var(--b300);
+        color: #fff;
+      }
+    }
+  }
+
+  .store-ct-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .store-list-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .label-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .label-checkbox label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  #rounzLens[type="checkbox"]+div>span {
+    width: 16px;
+    height: 16px;
+    background: url('../images/icon_discheck.svg') no-repeat center center / 100% auto;
+  }
+
+  #rounzLens[type="checkbox"]:checked+div>span {
+    background: url('../images/icon_checked.svg') no-repeat center center / 100% auto;
+  }
+
+}
+
+.rounz-lens-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg);
+  color: var(--b300);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.icon-pb-lense {
+  display: inline-flex;
+  width: var(--body);
+  height: var(--body);
+  background: url('../images/store/icon_pb_lense.png') no-repeat center center / 100% auto;
+}
+
+.rounz-select select {
+  height: 48px;
+  line-height: 48px;
+  padding: 0 12px;
+}
