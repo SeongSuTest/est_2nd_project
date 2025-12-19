@@ -1,0 +1,27 @@
+@use "./variable.scss" as *;
+
+/* 메인 슬라이드 */
+.slideItemsWrapper{
+  display: grid;
+  grid-template-columns: 252px 1fr;
+  gap:16px;
+  div{
+    gap:8px;
+    p{
+      margin-bottom: 27px;
+    }
+  }
+}
+.slideItems{
+  display: grid;
+  grid-template-columns: repeat(3,3fr);
+  gap:16px;
+  padding-bottom: 54px;
+}
+.slideItems dd:last-child{
+  display: flex;
+  gap:8px;
+}
+.glassDesc dd p{
+  color: $error;
+}
