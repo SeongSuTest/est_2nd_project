@@ -7,66 +7,72 @@
   <title>라운즈 : 베스트 상품</title>
   <link rel="stylesheet" href="./css/common.css" />
   <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/best.css" />
 </head>
 
 <body>
   <header id="header"></header>
   <main class="container">
-    <h2>베스트 상품</h2>
-    <div class="filter">
-      <div class="filter-title">
-        <img src="" alt="" />
-        <p>필터를 선택해보세요</p>
-        <img src="" alt="" />
+    <h2 class="h2-tt">베스트 상품</h2>
+    <section class="filter">
+      <button class="filter-title">
+        <img src="./images/best-item/icon/filter-icon.png" alt="" />
+        <p class="body-tt">필터를 선택해보세요</p>
+        <img src="./images/best-item/icon/Rectangle 10 (Stroke).png" alt="" />
+      </button>
+      <div class="filter-body">
+        <div class="filter-category">
+          <p class="desc-tt">카테고리</p>
+          <ul>
+            <li><button class="bold-tt filter-button selected" type="button" data-category="all">전체</button></li>
+            <li><button class="bold-tt filter-button" type="button" data-category="glasses">안경테</button></li>
+            <li><button class="bold-tt filter-button" type="button" data-category="sunglasses">선글라스</button></li>
+          </ul>
+        </div>
+        <div class="filter-shape">
+          <p class="desc-tt">모양</p>
+          <ul>
+            <li><button class="bold-tt filter-button selected" type="button" data-shape="all">전체</button></li>
+            <li><button class="bold-tt filter-button" type="button" data-shape="round">라운드</button></li>
+            <li><button class="bold-tt filter-button" type="button" data-shape="square">스퀘어</button></li>
+            <li><button class="bold-tt filter-button" type="button" data-shape="browline">하금테</button></li>
+            <li><button class="bold-tt filter-button" type="button" data-shape="mix">믹스</button></li>
+            <li><button class="bold-tt filter-button" type="button" data-shape="other">기타</button></li>
+          </ul>
+        </div>
+        <div class="filter-submit"><button>완료</button></div>
       </div>
-      <div class="filter-category">
-        <p>카테고리</p>
+    </section>
+    <section>
+      <p class="total-item body-tt"><span>2,253</span>개의 상품이 있습니다.</p>
+      <div class="best-items">
         <ul>
-          <li><button type="button" data-category="all">전체</button></li>
-          <li><button type="button" data-category="glasses">안경테</button></li>
-          <li><button type="button" data-category="sunglasses">선글라스</button></li>
+          <li>
+            <div class="item-image">
+              <img src="./images/best-item/icon/RB4259F-601_71_03 1.png" alt="" />
+              <button>
+                <img src="./images/best-item/icon/icon_heart_line.png" alt="" />
+              </button>
+            </div>
+            <div class="item-description">
+              <p>PARANOID</p>
+              <h3>콘래드블랙 베타티타늄 콘래드 C1 47mm 애쉬크로프트 & 파라노이드 안경테</h3>
+              <p><span>45%</span>98,000원</p>
+              <a>안경원에서 써보기</a>
+            </div>
+          </li>
         </ul>
       </div>
-      <div class="filter-shape">
-        <p>모양</p>
+      <div class="page-button">
         <ul>
-          <li><button type="button" data-category="all">전체</button></li>
-          <li><button type="button" data-category="round">라운드</button></li>
-          <li><button type="button" data-category="square">스퀘어</button></li>
-          <li><button type="button" data-category="browline">하금테</button></li>
-          <li><button type="button" data-category="mix">믹스</button></li>
-          <li><button type="button" data-category="other">기타</button></li>
+          <li><button type="button" aria-label="이전 페이지"><img src="" alt="" /></button></li>
+          <li><button type="button" class="active">1</button></li>
+          <li><button type="button">2</button></li>
+          <li><button type="button">3</button></li>
+          <li><button type="button" aria-label="다음 페이지"><img src="" alt="" /></button></li>
         </ul>
       </div>
-    </div>
-    <p>2,253개의 상품이 있습니다.</p>
-    <div class="best-items">
-      <ul>
-        <li>
-          <div class="item-image">
-            <img src="" alt="" />
-            <button>
-              <img src="" alt="" />
-            </button>
-          </div>
-          <div class="item-description">
-            <p>brand</p>
-            <h3>title & description</h3>
-            <p><span>00%</span>99,999원</p>
-            <a>안경원에서 써보기</a>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <div class="page-button">
-      <ul>
-        <li><button type="button" aria-label="이전 페이지"><img src="" alt="" /></button></li>
-        <li><button type="button" class="active">1</button></li>
-        <li><button type="button">2</button></li>
-        <li><button type="button">3</button></li>
-        <li><button type="button" aria-label="다음 페이지"><img src="" alt="" /></button></li>
-      </ul>
-    </div>
+    </section>
   </main>
   <footer id="footer"></footer>
   <script type="module" src="/js/best.js"></script>
