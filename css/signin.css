@@ -12,10 +12,10 @@ main {
   display: flex;
   flex-direction: column;
   width: 700px;
-  height: 2218px;
   background: #fff;
   padding: 0 50px;
   margin: 0 auto;
+  border-bottom: 1px solid #eaeaea;
 }
 .wrapper form > h3 {
   padding: 27px 0;
@@ -37,23 +37,12 @@ main {
   height: 70px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  padding-right: 120px;
+  justify-content: space-around;
+  padding: 0 100px;
 }
 
 .formList label {
   position: relative;
-}
-
-.formList dd .hint {
-  position: absolute;
-  color: #a8a8a8;
-  padding: 18px 12px;
-  pointer-events: none;
-}
-
-.hide {
-  display: none;
 }
 
 .formList dd:last-child {
@@ -92,12 +81,14 @@ main {
 .hidden {
   opacity: 0;
   display: inline;
+  position: absolute;
 }
 
 .active {
   opacity: 1;
   display: block;
   color: #ff2d2d;
+  position: relative;
 }
 
 .error {
@@ -113,6 +104,9 @@ main {
   border: 1px solid #a8a8a8;
   padding: 0 10px;
   margin-top: 20px;
+  overflow-y: scroll;
+  height: 150px;
+  margin-bottom: 20px;
 }
 .description div p {
   color: #848484;
@@ -128,14 +122,16 @@ main {
   display: none;
 }
 .termsList .top {
-  padding: 13px 0 12px 23px;
+  position: relative;
+  padding: 13px 0 12px 60px;
   border-bottom: 1px solid #a8a8a8;
 }
 .termsList ul {
+  position: relative;
   padding: 20px 20px 81px 20px;
 }
 .termsList ul li {
-  padding-bottom: 20px;
+  padding: 0 0 20px 40px;
 }
 .termsList ul li label {
   color: #4f4f4f;
@@ -144,9 +140,23 @@ main {
   padding-bottom: 0;
 }
 
-.termsList ul li:nth-child(2), li:nth-child(4) {
+.termsList ul li:nth-child(2), li:nth-child(5) {
   display: flex;
   justify-content: space-between;
+}
+
+.box {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: #eaeaea;
+  border-radius: 2px;
+  left: 20px;
+  padding: 6px 4px;
+}
+
+.box .aa {
+  background: #0007b2;
 }
 
 .big {
