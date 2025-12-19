@@ -7,6 +7,7 @@ main section {
 .store-head {
   width: 100%;
   background-color: $bg;
+  margin-bottom: 54px;
 
   >div {
     display: flex;
@@ -57,6 +58,10 @@ main section {
 
 
     >.btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
       margin-top: 27px;
       color: $b300;
       border-color: $b300;
@@ -150,20 +155,21 @@ main section {
 
   .store-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 16px;
-
   }
 
-  @media screen and (max-width: 480px) {
-    .store-list {
-      grid-template-columns: repeat(2, 1fr);
+  .store-content {
+    display: none;
+
+    &.active {
+      display: block;
     }
   }
 
-
   .store-list li {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 16px;
   }
 
@@ -183,15 +189,146 @@ main section {
     }
   }
 
-
-
   .store-list-box {
     display: flex;
     flex-direction: column;
     gap: 8px;
+
+    .store-name {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .icon-pb-lense {
+        width: $font-xs;
+      }
+
+      .rounz-lens-chip {
+        gap: 4px;
+      }
+
+      .small-tt {
+        line-height: 100%;
+      }
+    }
+
+    p.desc-tt {
+      color: $g100;
+    }
+
+    p.body-tt {
+      color: $g400;
+    }
+
+    a.tel-tt {
+      color: $g100;
+    }
+
+    .store-btn {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-top: 16px;
+
+      a {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        color: $g200;
+        border-radius: 4px;
+        border: solid 1px $g50;
+        height: 48px;
+        transition: 0.3s;
+
+        i {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          width: 16px;
+          height: 16px;
+          background-position: center center;
+          background-size: auto 100%;
+          background-repeat: no-repeat;
+        }
+
+        @each $store-btn-icon in (call, map) {
+          .icon-#{$store-btn-icon} {
+            background-image: url('../images/store/icon_card_#{$store-btn-icon}.svg');
+          }
+        }
+
+        &:hover {
+          color: $b400;
+          border-color: $b300;
+
+          @each $store-btn-icon in (call, map) {
+            .icon-#{$store-btn-icon} {
+              background-image: url('../images/store/icon_card_#{$store-btn-icon}_hover.svg');
+            }
+          }
+        }
+      }
+    }
   }
 
 }
+
+.store-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 54px;
+
+  button {
+    font-family: $font-pretendard;
+    font-size: $font-md;
+    font-weight: 600;
+    line-height: 100%;
+    color: $g100;
+    padding: 4px;
+
+    &.active {
+      background-color: $b300;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      color: $white;
+    }
+  }
+
+}
+
+.btn-arrow {
+  width: 12px;
+  height: 10px;
+  background-image: url('../images/store/icon_arrow_right.svg');
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &:hover {
+    background-image: url('../images/store/icon_arrow_right_hover.svg');
+  }
+}
+.store-prev,
+.store-next {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url('../images/store/icon_right_button.svg');
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 12px auto;
+}
+
+.store-prev {
+  transform: rotate(-180deg);
+}
+
 
 .rounz-lens-chip {
   display: inline-flex;
@@ -199,8 +336,10 @@ main section {
   gap: 6px;
   background-color: $bg;
   color: $b300;
-  padding: 0 8px;
+  padding: 2px 8px;
   border-radius: 4px;
+  line-height: 27px;
+  font-weight: 600;
 }
 
 .icon-pb-lense {

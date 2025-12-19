@@ -7,7 +7,7 @@
       "price": 28800,
       "discount": 48,
       "soldout": true,
-      "image": "RB7140-2001(51)_11.jpg",
+      "image": "/images/best-item/RB7140-2001(51)_11.jpg",
       "category": "glasses",
       "type": "round"
     },
@@ -18,7 +18,7 @@
       "price": 28800,
       "discount": 48,
       "soldout": false,
-      "image": "5375-BK(48)_11.jpg",
+      "image": "/images/best-item/5375-BK(48)_11.jpg",
       "category": "glasses",
       "type": "round",
       "other": ["여행 필수템 특가할인"]
@@ -30,7 +30,7 @@
       "price": 185600,
       "discount": 20,
       "soldout": false,
-      "image": "RB3447V-2503(50)_03.jpg",
+      "image": "/images/best-item/RB3447V-2503(50)_03.jpg",
       "category": "glasses",
       "type": "round"
     },
@@ -41,7 +41,7 @@
       "price": 185600,
       "discount": 20,
       "soldout": false,
-      "image": "RB3447V-2620(50)_03.jpg",
+      "image": "/images/best-item/RB3447V-2620(50)_03.jpg",
       "category": "glasses",
       "type": "round"
     },
@@ -52,7 +52,7 @@
       "price": 215000,
       "discount": 0,
       "soldout": false,
-      "image": "CLIFT-BK(46)_03.jpg",
+      "image": "/images/best-item/CLIFT-BK(46)_03.jpg",
       "category": "glasses",
       "type": "square"
     },
@@ -63,7 +63,7 @@
       "price": 28800,
       "discount": 48,
       "soldout": false,
-      "image": "5374-BK(47)_03.jpg",
+      "image": "/images/best-item/5374-BK(47)_03.jpg",
       "category": "glasses",
       "type": "square"
     },
@@ -74,7 +74,7 @@
       "price": 196800,
       "discount": 20,
       "soldout": false,
-      "image": "RB5154-2000(51)_11.jpg",
+      "image": "/images/best-item/RB5154-2000(51)_11.jpg",
       "category": "glasses",
       "type": "browline"
     },
@@ -85,7 +85,7 @@
       "price": 32800,
       "discount": 51,
       "soldout": false,
-      "image": "5386-BK(49)_11.jpg",
+      "image": "/images/best-item/5386-BK(49)_11.jpg",
       "category": "glasses",
       "type": "browline"
     },
@@ -96,7 +96,7 @@
       "price": 69000,
       "discount": 50,
       "soldout": false,
-      "image": "BANMU-T3-SILVER(48)_11.jpg",
+      "image": "/images/best-item/BANMU-T3-SILVER(48)_11.jpg",
       "category": "glasses",
       "type": "browline"
     },
@@ -107,7 +107,7 @@
       "price": 39000,
       "discount": 40,
       "soldout": false,
-      "image": "ROUNZ-BASIC-BC4_11.webp",
+      "image": "/images/best-item/ROUNZ-BASIC-BC4_11.webp",
       "category": "glasses",
       "type": "browline"
     },
@@ -118,7 +118,7 @@
       "price": 39000,
       "discount": 40,
       "soldout": false,
-      "image": "ROUNZ-BASIC-F1_11.webp",
+      "image": "/images/best-item/ROUNZ-BASIC-F1_11.webp",
       "category": "glasses",
       "type": "mix"
     },
@@ -129,7 +129,7 @@
       "price": 99000,
       "discount": 61,
       "soldout": false,
-      "image": "VO111-SIV_11.jpg",
+      "image": "/images/best-item/VO111-SIV_11.jpg",
       "category": "glasses",
       "type": "mix"
     },
@@ -140,7 +140,7 @@
       "price": 258000,
       "discount": 0,
       "soldout": false,
-      "image": "L-TYPE-CEDAR-C2_03.jpg",
+      "image": "/images/best-item/L-TYPE-CEDAR-C2_03.jpg",
       "category": "glasses",
       "type": "mix"
     },
@@ -151,7 +151,7 @@
       "price": 282000,
       "discount": 0,
       "soldout": false,
-      "image": "NOBU2-T02_11.jpg",
+      "image": "/images/best-item/NOBU2-T02_11.jpg",
       "category": "glasses",
       "type": "other"
     },
@@ -162,7 +162,7 @@
       "price": 282000,
       "discount": 0,
       "soldout": true,
-      "image": "RB4259F-601_71_03.jpg",
+      "image": "/images/best-item/RB4259F-601_71_03.jpg",
       "category": "sunglasses",
       "type": "round"
     },
@@ -173,7 +173,7 @@
       "price": 204800,
       "discount": 0,
       "soldout": false,
-      "image": "RB3447-001(53)_11.jpg",
+      "image": "/images/best-item/RB3447-001(53)_11.jpg",
       "category": "sunglasses",
       "type": "round"
     },
@@ -184,7 +184,7 @@
       "price": 208800,
       "discount": 20,
       "soldout": false,
-      "image": "OO9438-0158_03.jpg",
+      "image": "/images/best-item/OO9438-0158_03.jpg",
       "category": "sunglasses",
       "type": "round"
     },
@@ -195,7 +195,7 @@
       "price": 27000,
       "discount": 72,
       "soldout": false,
-      "image": "MK3807-BLK_11.jpg",
+      "image": "/images/best-item/MK3807-BLK_11.jpg",
       "category": "sunglasses",
       "type": "round"
     },
@@ -206,7 +206,7 @@
       "price": 191200,
       "discount": 20,
       "soldout": false,
-      "image": "RB4258F-601_71_03.jpg",
+      "image": "/images/best-item/RB4258F-601_71_03.jpg",
       "category": "sunglasses",
       "type": "square"
     },
@@ -217,7 +217,7 @@
       "price": 172800,
       "discount": 20,
       "soldout": false,
-      "image": "RB4260D-601_71_03.jpg",
+      "image": "/images/best-item/RB4260D-601_71_03.jpg",
       "category": "sunglasses",
       "type": "square"
     },
@@ -228,7 +228,7 @@
       "price": 208800,
       "discount": 20,
       "soldout": false,
-      "image": "OO9244-29_11.jpg",
+      "image": "/images/best-item/OO9244-29_11.jpg",
       "category": "sunglasses",
       "type": "square"
     },
@@ -239,7 +239,7 @@
       "price": 32800,
       "discount": 51,
       "soldout": false,
-      "image": "5457-BK(53)_11.jpg",
+      "image": "/images/best-item/5457-BK(53)_11.jpg",
       "category": "sunglasses",
       "type": "browline"
     },
@@ -250,7 +250,7 @@
       "price": 233700,
       "discount": 5,
       "soldout": false,
-      "image": "CARDINAL-ALONE-C1(55)_03.jpg",
+      "image": "/images/best-item/CARDINAL-ALONE-C1(55)_03.jpg",
       "category": "sunglasses",
       "type": "browline"
     },
@@ -261,7 +261,7 @@
       "price": 39000,
       "discount": 50,
       "soldout": false,
-      "image": "ROUNZ-BASIC-TR90-12-C1_03.webp",
+      "image": "/images/best-item/ROUNZ-BASIC-TR90-12-C1_03.webp",
       "category": "sunglasses",
       "type": "mix"
     },
@@ -272,7 +272,7 @@
       "price": 32800,
       "discount": 51,
       "soldout": false,
-      "image": "62226-BK(52)_11.jpg",
+      "image": "/images/best-item/62226-BK(52)_11.jpg",
       "category": "sunglasses",
       "type": "mix"
     },
@@ -283,7 +283,7 @@
       "price": 810000,
       "discount": 0,
       "soldout": false,
-      "image": "AIMEE-CHROME_11.jpg",
+      "image": "/images/best-item/AIMEE-CHROME_11.jpg",
       "category": "sunglasses",
       "type": "other"
     }

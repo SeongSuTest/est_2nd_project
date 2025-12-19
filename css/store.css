@@ -8,6 +8,7 @@ main section {
 .store-head {
   width: 100%;
   background-color: #f4f4fa;
+  margin-bottom: 54px;
 }
 .store-head > div {
   display: flex;
@@ -50,6 +51,10 @@ main section {
   margin-right: 4px;
 }
 .store-head .store-intro-list > .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
   margin-top: 27px;
   color: #0007b2;
   border-color: #0007b2;
@@ -126,16 +131,18 @@ main section {
 }
 .store-ct .store-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
-@media screen and (max-width: 480px) {
-  .store-ct .store-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.store-ct .store-content {
+  display: none;
+}
+.store-ct .store-content.active {
+  display: block;
 }
 .store-ct .store-list li {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 16px;
 }
 .store-ct .store-list-img {
@@ -156,6 +163,124 @@ main section {
   flex-direction: column;
   gap: 8px;
 }
+.store-ct .store-list-box .store-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.store-ct .store-list-box .store-name .icon-pb-lense {
+  width: 12px;
+}
+.store-ct .store-list-box .store-name .rounz-lens-chip {
+  gap: 4px;
+}
+.store-ct .store-list-box .store-name .small-tt {
+  line-height: 100%;
+}
+.store-ct .store-list-box p.desc-tt {
+  color: #848484;
+}
+.store-ct .store-list-box p.body-tt {
+  color: #1e1e1e;
+}
+.store-ct .store-list-box a.tel-tt {
+  color: #848484;
+}
+.store-ct .store-list-box .store-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+.store-ct .store-list-box .store-btn a {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  color: #4f4f4f;
+  border-radius: 4px;
+  border: solid 1px #eaeaea;
+  height: 48px;
+  transition: 0.3s;
+}
+.store-ct .store-list-box .store-btn a i {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 16px;
+  height: 16px;
+  background-position: center center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+}
+.store-ct .store-list-box .store-btn a .icon-call {
+  background-image: url("../images/store/icon_card_call.svg");
+}
+.store-ct .store-list-box .store-btn a .icon-map {
+  background-image: url("../images/store/icon_card_map.svg");
+}
+.store-ct .store-list-box .store-btn a:hover {
+  color: #0006a0;
+  border-color: #0007b2;
+}
+.store-ct .store-list-box .store-btn a:hover .icon-call {
+  background-image: url("../images/store/icon_card_call_hover.svg");
+}
+.store-ct .store-list-box .store-btn a:hover .icon-map {
+  background-image: url("../images/store/icon_card_map_hover.svg");
+}
+
+.store-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 54px;
+}
+.store-page button {
+  font-family: "Pretendard", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 100%;
+  color: #848484;
+  padding: 4px;
+}
+.store-page button.active {
+  background-color: #0007b2;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  color: #ffffff;
+}
+
+.btn-arrow {
+  width: 12px;
+  height: 10px;
+  background-image: url("../images/store/icon_arrow_right.svg");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.btn-arrow:hover {
+  background-image: url("../images/store/icon_arrow_right_hover.svg");
+}
+
+.store-prev,
+.store-next {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/store/icon_right_button.svg");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 12px auto;
+}
+
+.store-prev {
+  transform: rotate(-180deg);
+}
 
 .rounz-lens-chip {
   display: inline-flex;
@@ -163,8 +288,10 @@ main section {
   gap: 6px;
   background-color: #f4f4fa;
   color: #0007b2;
-  padding: 0 8px;
+  padding: 2px 8px;
   border-radius: 4px;
+  line-height: 27px;
+  font-weight: 600;
 }
 
 .icon-pb-lense {

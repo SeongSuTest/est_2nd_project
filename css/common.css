@@ -597,7 +597,8 @@ html {
 }
 
 .container {
-  width: 1592px;
+  max-width: 1592px;
+  padding: 0 16px;
   margin: 0 auto;
 }
 
