@@ -4,9 +4,13 @@
 /* Text-size styles */
 /* 메인 슬라이드 */
 .slideItemsWrapper {
+  width: 1052px;
   display: grid;
+  overflow: hidden;
   grid-template-columns: 252px 1fr;
   gap: 16px;
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 54px;
 }
 .slideItemsWrapper div {
   gap: 8px;
@@ -14,12 +18,37 @@
 .slideItemsWrapper div p {
   margin-bottom: 27px;
 }
+.slideItemsWrapper button {
+  color: #0007b2;
+  padding-right: 10px;
+}
+
+.slideItemsWrapper:last-child {
+  border-bottom: 0;
+  margin-bottom: 0;
+}
+
+.slide-wrapper {
+  width: 100%;
+  overflow: hidden;
+  height: 465px;
+}
 
 .slideItems {
-  display: grid;
-  grid-template-columns: repeat(3, 3fr);
-  gap: 16px;
-  padding-bottom: 54px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+}
+.slideItems li {
+  display: flex;
+  top: 0%;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  list-style: none;
 }
 
 .slideItems dd:last-child {
@@ -27,6 +56,24 @@
   gap: 8px;
 }
 
-.glassDesc dd p {
+.glassDesc dt {
+  color: #848484;
+}
+
+.glassDesc dd:first-child {
+  color: #1e1e1e;
+}
+
+.glassDesc dd span {
   color: #ff2d2d;
-}/*# sourceMappingURL=main.css.map */
+}
+
+.sale {
+  color: #ff2d2d;
+}
+
+.swiper {
+  width: 100%;
+}
+
+/*  메인 슬라이드 끝  *//*# sourceMappingURL=main.css.map */

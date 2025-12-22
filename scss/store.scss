@@ -89,22 +89,30 @@ main section {
       display: flex;
       align-items: center;
       justify-content: center;
-
-      border: solid 1px $g50;
       height: 80px;
-      transition: 0.3s;
-      color: $g75;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+
+        border: solid 1px $g50;
+        transition: 0.3s;
+        color: $g75;
+      }
 
       &:last-of-type {
         border-left: none;
       }
 
-      &:hover {
+      &:hover a {
         color: $b300;
         border-color: $b300;
       }
 
-      &.active {
+      &.active a {
         border-color: $b300;
         background: $b300;
         color: #fff;
@@ -125,10 +133,15 @@ main section {
   }
 
   .label-checkbox {
-    display: flex;
     align-items: center;
     gap: 6px;
+    display: none;
+
+    &.active {
+      display: flex;
+    }
   }
+
 
   .label-checkbox label {
     display: flex;
@@ -156,7 +169,7 @@ main section {
   .store-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
+    gap: 54px 16px;
   }
 
   .store-content {
@@ -192,7 +205,16 @@ main section {
   .store-list-box {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    justify-content: space-between;
+    gap: 4px;
+    height: 100%;
+
+    .store-text {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 0 4px;
+    }
 
     .store-name {
       display: flex;
@@ -216,8 +238,10 @@ main section {
       color: $g100;
     }
 
-    p.body-tt {
+    p.road-tt {
       color: $g400;
+      line-height: 1.4;
+      font-weight: 500;
     }
 
     a.tel-tt {
@@ -228,7 +252,7 @@ main section {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 16px;
+      gap: 8px;
       margin-top: 16px;
 
       a {
@@ -300,6 +324,21 @@ main section {
     }
   }
 
+  #numbers {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+.store-foot {
+  >div {
+    display: none;
+
+    &.active {
+      display: flex;
+    }
+  }
 }
 
 .btn-arrow {
@@ -313,7 +352,12 @@ main section {
   &:hover {
     background-image: url('../images/store/icon_arrow_right_hover.svg');
   }
+
+  &.btn-white {
+    background-image: url('../images/store/icon_arrow_right_white.svg');
+  }
 }
+
 .store-prev,
 .store-next {
   display: inline-block;
@@ -357,7 +401,7 @@ main section {
   height: 48px;
   line-height: 48px;
   padding: 0 12px;
-  min-width: 120px;
+  min-width: 160px;
 }
 
 select::-ms-expand {
@@ -373,4 +417,117 @@ select {
 
 select {
   background: url('../images/store/icon_arrow_select.png') no-repeat calc(100% - 12px) center / 11px auto;
+}
+
+.store-foot-direct {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $bg;
+  gap: 108px;
+  padding: 54px 0;
+
+
+  .store-ct-slide-wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 560px;
+    height: 360px;
+  }
+
+  .store-ct-slide-container {
+    position: relative;
+    width: 480px;
+    height: 360px;
+    overflow: hidden;
+
+    ul {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      transition: 0.5s ease-out;
+    }
+
+    li {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      
+    }
+    img {
+      width: 100%;
+    }
+
+    // &.animated {
+    //   transition: left .3s ease-in;
+    //   left: 0;
+    // }
+  }
+
+  .store-foot-slide-btn {
+    width: 100%;
+    top: 50%;
+    height: 40px;
+    position: absolute;
+    transform: translateY(-50%);
+
+    button {
+      position: absolute;
+      display: inline-flex;
+      width: 24px;
+      height: 40px;
+    }
+
+    #foot-slide-prevbtn {
+      right: 100%;
+    }
+
+    #foot-slide-nextbtn {
+      left: 100%;
+    }
+  }
+  .store-ct-bullet {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    bottom: 12px;
+
+    span {
+      display: inline-flex;
+      width: 9px;
+      height: 9px;
+      background: $white;
+    }
+  }
+
+  .store-ct-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .store-chain {
+    h4 {
+      color: $b300;
+      margin-bottom: 16px;
+    }
+
+    .btn {
+      color: $white;
+      background: $b300;
+      display: inline-flex;
+      padding: 0 24px;
+    }
+  }
 }

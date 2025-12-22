@@ -64,35 +64,29 @@ main{
     right:0;
     margin: 11px 12px;
   }
-  .pwHint{
-    color:$g100;
-  }
 }
-.hidden{
-  opacity: 0;
+.pw-rule{
+  color:$g100;
+}
+.pw-rule.error{
+  color: $error;
+}
+.pwHint{
+  display: none;
+}
+.pwHint.error{
   display: inline;
-  position: absolute;
-}
-.active{   // 비밀번호 불일치시
-  opacity:1;
-  display:block;
-  color: $error;
-  position: relative;
-}
-.error{
   color: $error;
 }
-.see{
-  text-decoration: underline;
-  color:$g75;
+.red{
+  color: $error;
 }
 .description{
+  width: 100%;
   border: 1px solid $g75;
   padding: 0 10px;
-  margin-top: 20px;
   overflow-y: scroll;
   height: 150px;
-  margin-bottom: 20px;
   div p{
     color: $g100;
   }
@@ -102,19 +96,18 @@ main{
 }
 .termsList{
   border: 1px solid $g75;
-  input{
-    display: none;
-  }
   .top{
-    position: relative;
-    padding: 13px 0 12px 60px;
+    display: flex;
+    gap:10px;
+    padding: 13px 0 12px 20px;
     border-bottom: 1px solid $g75;
   }
   ul{
-    position: relative;
     padding: 20px 20px 81px 20px;
     li{
-      padding: 0 00 20px 40px;
+      display: flex;
+      gap:10px;
+      padding-bottom: 20px;
       label{
         color:$g200;
       }
@@ -124,21 +117,36 @@ main{
     }
   }
 }
-.termsList ul li:nth-child(2), li:nth-child(5){
+.see{
+  text-decoration: underline;
+  color:$g75;
+  margin-left: auto;
+}
+.seeList{
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+}
+.termsList input{
+  display: none;
 }
 .box{
-  position: absolute;
+  display: inline-block;
   width: 24px;
   height: 24px;
   background: $g50;
   border-radius: 2px;
-  left:20px;
-  padding: 6px 4px;
+  background-image: url('/images/signin/VectorStroke.png');
+  background-repeat: no-repeat;
+  background-position: center;
 }
-.box .aa{
+.termsList input:checked + .box{
+  display: inline-block;
   background: $b300;
+  width: 24px;
+  height: 24px;
+  background-image: url('/images/signin/VectorStrokeOn.png');
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .big{
   width: 600px;
@@ -147,4 +155,22 @@ main{
   background: $g100;
   border-radius: 4px;
   margin-bottom: 81px;
+}
+
+@media (max-width:768px){
+  main{
+    display: flex;
+    background: none;
+  }
+  .wrapper{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    form{
+      padding: 16px;
+    }
+  }
+  .title, .kakao, .big{
+    width: 100%;
+  }
 }
