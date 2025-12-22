@@ -93,12 +93,10 @@ body {
 
 .color_chips { display: flex; gap: 12px; }
 
-/* 라디오 버튼 본체는 숨김 */
 .color_chips input[type="radio"] {
   display: none;
 }
 
-/* 라벨을 동그란 버튼으로 디자인 */
 .color_chips label {
   width: 28px;
   height: 28px;
@@ -106,7 +104,7 @@ body {
   border: 1px solid #eee;
   cursor: pointer;
   display: block;
-  text-indent: -9999px; /* 글자 숨기기 */
+  text-indent: -9999px;
   transition: all 0.2s;
 }
 
@@ -114,7 +112,6 @@ body {
 .chip_red { background: #ff3b00; }
 .chip_blue { background: #0007B2; }
 
-/* 라디오 버튼이 선택되었을 때(checked) 해당 라벨(+)에 테두리 적용 */
 .color_chips input[type="radio"]:checked + label {
   outline: 2px solid #00c73c;
   outline-offset: 2.5px;
