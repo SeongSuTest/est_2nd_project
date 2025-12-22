@@ -1,3 +1,4 @@
+// best.scss
 @use "./variable.scss" as *;
 
 .container {
@@ -8,10 +9,10 @@
 }
 
 // filter
-
 .filter {
   border: 1px solid $g75;
   padding: 16px 30px;
+
   &.collapsed .filter-body {
     max-height: 0;
   }
@@ -20,6 +21,7 @@
   width: 100%;
   display: flex;
   align-items: center;
+
   p {
     margin-left: 22px;
   }
@@ -38,7 +40,9 @@
 .filter-shape {
   margin-top: 20px;
 }
-ul {
+
+.filter-body ul,
+.page-button ul {
   margin-top: 8px;
   display: flex;
   gap: 15px;
@@ -49,6 +53,7 @@ ul {
   border: 1px solid $g100;
   border-radius: 4px;
   color: $g100;
+
   &.selected {
     border-color: $b300;
     color: $b300;
@@ -58,6 +63,7 @@ ul {
   display: flex;
   justify-content: flex-end;
   width: 100%;
+
   button {
     padding: 16px 24px;
     background: $b300;
@@ -67,27 +73,56 @@ ul {
 }
 
 // total items count
-
 .total-item {
+  margin-bottom: 10px;
   span {
     font-weight: 700;
   }
 }
 
 // best items
-
 .best-items {
   ul {
     display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px 15px;
+    margin-top: 0;
+
+    @media (max-width: 1600px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 480px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
+
   li {
-    width: 254px;
+    width: auto;
+
     .item-image {
       position: relative;
+      > img {
+        width: 100%;
+      }
+
       .like-button {
         position: absolute;
         bottom: 13px;
         right: 12px;
+      }
+
+      .soldout-badge {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        padding: 6px 10px;
+        border-radius: 4px;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        font-size: 12px;
       }
     }
 
@@ -110,6 +145,71 @@ ul {
       background: $bg;
       padding: 0 8px;
       color: $b300;
+    }
+  }
+}
+
+// pagination
+.page-button {
+  margin-top: 24px;
+
+  ul {
+    justify-content: center;
+    align-items: center;
+  }
+
+  button {
+    min-width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    border: 1px solid $g75;
+    background: #fff;
+    color: $g400;
+
+    &.active {
+      border-color: $b300;
+      color: $b300;
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  h2 {
+    display: none;
+  }
+  .container {
+    padding-top: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .mobile-container {
+    max-width: $container;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  .filter-button {
+    padding: 12px 18px;
+    border: 1px solid $g100;
+    border-radius: 4px;
+    color: $g100;
+  }
+  .best-items li {
+    .item-brand {
+      font-size: 12px;
+    }
+    h3 {
+      font-size: 15px;
+    }
+    .item-price {
+      font-size: 18px;
+    }
+    a {
+      font-size: 12px;
     }
   }
 }

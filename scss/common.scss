@@ -147,12 +147,16 @@ html {
 // header
 @media (max-width: 1199px) {
   header {
-    position: relative;
+    // position: relative;
+    position: sticky;
+    top: 0;
+    background: white;
     display: flex;
     padding: 0 8px 0 23px;
     height: 54px;
     align-items: center;
     border-bottom: 1px solid $g500;
+    z-index: 9999;
 
     .rounz-main-logo {
       img {
@@ -189,9 +193,11 @@ html {
     &.is-menu-open {
       > ul {
         display: block;
+        z-index: 9998;
       }
       .menu-child {
         display: block;
+        z-index: 9999;
       }
     }
 
@@ -270,11 +276,15 @@ html {
 
 @media (min-width: 1200px) {
   header {
+    position: sticky;
+    top: 0;
+    background: white;
     height: 80px;
     display: flex;
     padding: 0 38px;
     align-items: center;
     border-bottom: 1px solid $g500;
+    z-index: 9999;
     .rounz-main-logo {
       margin-right: 55px;
       img {
