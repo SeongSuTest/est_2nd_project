@@ -7,38 +7,20 @@
   <title>라운즈(ROUNZ) - 상세페이지</title>
   <link rel="stylesheet" as="style" crossorigin
     href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="./css/common.css" />
   <link rel="stylesheet" href="css/info.css">
 </head>
 
 <body>
 
-  <header class="header">
-    <div class="header_inner">
-      <h1 class="logo">ROUNZ</h1>
-      <nav class="gnb">
-        <ul>
-          <li>안경테</li>
-          <li>선글라스</li>
-          <li>베스트</li>
-          <li>브랜드</li>
-          <li>라운즈ONLY</li>
-          <li>안경원</li>
-          <li>신상품</li>
-          <li>기획전</li>
-          <li>시리즈</li>
-          <li>라운즈소개</li>
-          <li>고객센터</li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <header id="header"></header>
 
   <main class="container">
     <nav class="breadcrumb">홈 / 선글라스 / Ray-Ban / 클럽마스터</nav>
 
     <section class="product_summary">
       <div class="product_gallery">
-        <img src="images/main_glasses.png" alt="레이밴 클럽마스터">
+        <img src="images/info/main_glasses.png" alt="레이밴 클럽마스터">
       </div>
 
       <div class="product_purchase">
@@ -58,19 +40,29 @@
         <div class="color_selection">
           <p class="label">색상</p>
           <div class="color_chips">
-            <span class="chip_black"></span>
-            <span class="chip_red active"></span> <span class="chip_blue"></span>
+            <input type="radio" name="color" id="color_black" value="black">
+            <label for="color_black" class="chip_black">black</label>
+
+
+
+            <input type="radio" name="color" id="color_red" value="red" checked>
+            <label for="color_red" class="chip_red">red</label>
+
+
+            <input type="radio" name="color" id="color_blue" value="blue">
+            <label for="color_blue" class="chip_blue">blue</label>
           </div>
         </div>
 
+        
         <div class="member_benefit">
           <p>신규 회원 님 최대 할인 가격</p>
           <strong>192,621원</strong>
         </div>
 
         <div class="delivery_meta">
-          <p><span class="label">배송비</span> 무료배송</p>
-          <p><span class="label">적립금</span> 1,920원</p>
+          <p><span class="label">배송비</span><strong>무료배송</strong></p>
+          <p><span class="label">적립금</span><strong>1,920원</strong></p>
         </div>
 
         <div class="action_buttons">
@@ -87,11 +79,11 @@
     </section>
 
     <nav class="detail_tabs">
-      <button class="active">상세정보</button>
-      <button>리뷰 (4)</button>
+      <a href="#detail_content" class="active">상세정보</a>
+      <a href="#review_section">리뷰 (4)</a>
     </nav>
 
-    <section class="detail_content">
+    <section id="detail_content" class="detail_content">
       <div class="description_box">
         <h3>궁극의 스테디셀러.<br>레이밴 클럽마스터.</h3>
         <h3>시간이 흘러도 변치 않는 클래식의 가치.</h3>
@@ -99,14 +91,14 @@
       </div>
 
       <div class="detail_image_list">
-        <img src="images/detail_view.png" alt="상세컷 측면">
-        <img src="images/detail_view2.png" alt="상세컷 대각선">
-        <img src="images/detail_view3.png" alt="상세컷 확대">
-        <img src="images/detail_view4.png" alt="상세컷 뒷면">
+        <img src="images/info/detail_view.png" alt="상세컷 측면">
+        <img src="images/info/detail_view2.png" alt="상세컷 대각선">
+        <img src="images/info/detail_view3.png" alt="상세컷 확대">
+        <img src="images/info/detail_view4.png" alt="상세컷 뒷면">
       </div>
     </section>
 
-    <section class="review_section">
+    <section id="review_section" class="review_section">
       <div class="review_grid">
         <div class="review_card">
           <div class="review_text_area">
@@ -114,7 +106,7 @@
             <p>선글라스는 여기! 선글라스 사셔야 한다면 무조건 이곳에서 구매!</p>
             <div class="review_footer"><span>박서*</span> <span>2023.11.15</span></div>
           </div>
-          <img src="images/review1.png" alt="리뷰1" class="review_thumb">
+          <img src="images/info/review1.png" alt="리뷰1" class="review_thumb">
         </div>
 
         <div class="review_card">
@@ -123,7 +115,7 @@
             <p>친구 선물~ 선물해 줬는데 만족해요~ 디자인이 너무 예뻐요.</p>
             <div class="review_footer"><span>강주*</span> <span>2024.05.08</span></div>
           </div>
-          <img src="images/review2.png" alt="리뷰2" class="review_thumb">
+          <img src="images/info/review2.png" alt="리뷰2" class="review_thumb">
         </div>
 
         <div class="review_card">
@@ -132,7 +124,7 @@
             <p>만족해요~ 사이즈 잘 보고 사세요! 잘 사세요!</p>
             <div class="review_footer"><span>김우*</span> <span>2025.07.24</span></div>
           </div>
-          <img src="images/review3.png" alt="리뷰3" class="review_thumb">
+          <img src="images/info/review3.png" alt="리뷰3" class="review_thumb">
         </div>
 
         <div class="review_card">
@@ -141,11 +133,14 @@
             <p>사이즈 착용감 굿! 행복한 쇼핑이었습니다. ㅎㅎ~</p>
             <div class="review_footer"><span>남혁*</span> <span>2020.01.20</span></div>
           </div>
-          <img src="images/review4.png" alt="리뷰4" class="review_thumb">
+          <img src="images/info/review4.png" alt="리뷰4" class="review_thumb">
         </div>
       </div>
     </section>
   </main>
+
+  <footer id="footer"></footer>
+  <script type="module" src="js/main.js"></script>
 </body>
 
 </html>
