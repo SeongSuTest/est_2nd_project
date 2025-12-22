@@ -5,13 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>라운즈 ROUNZ</title>
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+  />
   <link rel="stylesheet" href="./css/common.css" />
   <link rel="stylesheet" href="./css/main.css" />
 </head>
 
 <body>
-  <header>
-  </header>
+  <header id="header"></header>
 
   <main>
 
@@ -23,28 +26,97 @@
           <p class="body2-tt">말하지 않아도 드러나는 무드</p>
         </div>
         <button type="link" class="bold-tt">안경테 전체보기</button>
+        <img src="/images/main-slide-item/icon_arrow_right.png" alt="전체보기">
       </aside>
-      <ul class="slideItems">
-        <li>
-          <a href="상세보기 링크">
-            <div class="thumb">
-              <img src="images/main-slide-item/thumb/img_glass1.jpg" alt="img_glass1.jpg">
-            </div>
-            <dl class="glassDesc">
-              <dt class="desc-tt">RAY-BAN</dt>
-              <dd class="body-tt">블랙 ARNEL HERITAGE BLACK 50mm 타르트옵티컬 아넬 헤리티지 안경테</dd>
-              <dd>
-                <p class="h4-tt">20%</p>
-                <span class="h4-tt">72,000원</span>
-              </dd>
-            </dl>
-          </a>
-        </li>
-      </ul>
+      <div class="slide-wrapper swiper">
+        <ul class="slideItems swiper-wrapper">
+          
+          <li class="swiper-slide">
+            <a href="상세보기 링크">
+              <div class="thumb">
+                <img src="images/main-slide-item/thumb/img_glass1.jpg" alt="img_glass1.jpg">
+              </div>
+              <dl class="glassDesc">
+                <dt class="desc-tt">${d.brand}</dt>
+                <dd class="body-tt">${d.title}</dd>
+                <dd>
+                  <span class="h4-tt">0</span>
+                  <p class="h4-tt">${d.price}원</p>
+                </dd>
+              </dl>
+            </a>
+          </li>
+           
+        </ul>
+      </div>
+    </section>
+    <section class="container slideItemsWrapper">
+      <aside>
+        <div>
+          <h2 class="h2-tt">선글라스</h2>
+          <p class="body2-tt">무심하게 멋있는 순간</p>
+        </div>
+        <button type="link" class="bold-tt">선글라스 전체보기</button>
+        <img src="/images/main-slide-item/icon_arrow_right.png" alt="전체보기">
+      </aside>
+      <div class="slide-wrapper">
+        <ul class="slideItems">
+          <!-- 
+          <li>
+            <a href="상세보기 링크">
+              <div class="thumb">
+                <img src="${d.image}" alt="img_glass1.jpg">
+              </div>
+              <dl class="glassDesc">
+                <dt class="desc-tt">${d.brand}</dt>
+                <dd class="body-tt">${d.title}</dd>
+                <dd>
+                  <span class="h4-tt">${d.discountPercent}%</span>
+                  <p class="h4-tt">${d.price}원</p>
+                </dd>
+              </dl>
+            </a>
+            </li>
+            -->
+        </ul>
+      </div>
+    </section>
+    <section class="container slideItemsWrapper">
+      <aside>
+        <div>
+          <h2 class="h2-tt">할인 상품</h2>
+          <p class="body2-tt">회원 전용 <span class="sale">할인</span> 행사</p>
+        </div>
+        <button type="link" class="bold-tt">할인중인 상품 전체보기</button>
+        <img src="/images/main-slide-item/icon_arrow_right.png" alt="전체보기">
+      </aside>
+      <div class="slide-wrapper">
+        <ul class="slideItems">
+          <!--
+          <li>
+            <a href="상세보기 링크">
+              <div class="thumb">
+                <img src="${d.image}" alt="img_glass1.jpg">
+              </div>
+              <dl class="glassDesc">
+                <dt class="desc-tt">${d.brand}</dt>
+                <dd class="body-tt">${d.title}</dd>
+                <dd>
+                  <span class="h4-tt">${d.discountPercent}%</span>
+                  <p class="h4-tt">${d.price}원</p>
+                </dd>
+              </dl>
+            </a>
+          </li>
+          -->
+        </ul>
+      </div>
     </section>
 
   </main>
-  <footer></footer>
+  <footer id="footer"></footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script type="module" src="/js/main.js"></script>
 </body>
 
 </html>

@@ -74,39 +74,34 @@ main {
   right: 0;
   margin: 11px 12px;
 }
-.formList > dd .pwHint {
+
+.pw-rule {
   color: #848484;
 }
 
-.hidden {
-  opacity: 0;
+.pw-rule.error {
+  color: #ff2d2d;
+}
+
+.pwHint {
+  display: none;
+}
+
+.pwHint.error {
   display: inline;
-  position: absolute;
-}
-
-.active {
-  opacity: 1;
-  display: block;
-  color: #ff2d2d;
-  position: relative;
-}
-
-.error {
   color: #ff2d2d;
 }
 
-.see {
-  text-decoration: underline;
-  color: #a8a8a8;
+.red {
+  color: #ff2d2d;
 }
 
 .description {
+  width: 100%;
   border: 1px solid #a8a8a8;
   padding: 0 10px;
-  margin-top: 20px;
   overflow-y: scroll;
   height: 150px;
-  margin-bottom: 20px;
 }
 .description div p {
   color: #848484;
@@ -118,20 +113,19 @@ main {
 .termsList {
   border: 1px solid #a8a8a8;
 }
-.termsList input {
-  display: none;
-}
 .termsList .top {
-  position: relative;
-  padding: 13px 0 12px 60px;
+  display: flex;
+  gap: 10px;
+  padding: 13px 0 12px 20px;
   border-bottom: 1px solid #a8a8a8;
 }
 .termsList ul {
-  position: relative;
   padding: 20px 20px 81px 20px;
 }
 .termsList ul li {
-  padding: 0 0 20px 40px;
+  display: flex;
+  gap: 10px;
+  padding-bottom: 20px;
 }
 .termsList ul li label {
   color: #4f4f4f;
@@ -140,23 +134,40 @@ main {
   padding-bottom: 0;
 }
 
-.termsList ul li:nth-child(2), li:nth-child(5) {
+.see {
+  text-decoration: underline;
+  color: #a8a8a8;
+  margin-left: auto;
+}
+
+.seeList {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+}
+
+.termsList input {
+  display: none;
 }
 
 .box {
-  position: absolute;
+  display: inline-block;
   width: 24px;
   height: 24px;
   background: #eaeaea;
   border-radius: 2px;
-  left: 20px;
-  padding: 6px 4px;
+  background-image: url("/images/signin/VectorStroke.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.box .aa {
+.termsList input:checked + .box {
+  display: inline-block;
   background: #0007b2;
+  width: 24px;
+  height: 24px;
+  background-image: url("/images/signin/VectorStrokeOn.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .big {
@@ -166,4 +177,22 @@ main {
   background: #848484;
   border-radius: 4px;
   margin-bottom: 81px;
+}
+
+@media (max-width: 768px) {
+  main {
+    display: flex;
+    background: none;
+  }
+  .wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+  .wrapper form {
+    padding: 16px;
+  }
+  .title, .kakao, .big {
+    width: 100%;
+  }
 }/*# sourceMappingURL=signin.css.map */
