@@ -23,137 +23,141 @@
         <h3 class="h3-tt">회원가입</h3>
         <dl class="formList">
           <dt class="menu-tt">
-            <label for="username">이름 <span class="error">*</span></label>
+            <label for="username">이름 <span class="red">*</span></label>
           </dt>
           <dd>
-            <input type="text" id="username" name="username" placeholder="실명으로 입력해주세요" required>
+            <input type="text" id="username" name="username" placeholder="실명으로 입력해주세요." title="실명으로 입력해주세요" required>
           </dd>
           <dt class="menu-tt">
-            <label for="userId">아이디 <span class="error">*</span></label>
+            <label for="userId">아이디 <span class="red">*</span></label>
           </dt>
           <dd>
-            <input type="text" id="userId" name="userId" placeholder="영문/숫자로 4자 이상." required>
-            <button type="button" class="sm desc-tt">중복확인</button>
+            <input type="text" id="userId" name="userId" placeholder="영문/숫자로 4자 이상." title="영문/숫자로 4자 이상" required>
+            <button type="button" class="sm check desc-tt">중복확인</button>
           </dd>
           <dt class="menu-tt">
-            <label for="password">비밀번호 <span class="error">*</span></label>
+            <label for="password">비밀번호 <span class="red">*</span></label>
           </dt>
           <dd>
-            <input type="password" id="password" name="password" placeholder="비밀번호를 입력해주세요." required>
-            <p class="desc-tt pwHint">8자 이상 영문,숫자,특수문자 중 2개 이상 조합으로 입력해주세요.</p>
-            <p class="desc-tt pwHint">4개 이상 연속되거나 동일한 문자/숫자는 사용할 수 없어요.</p>
+            <input type="password" id="password" name="password" placeholder="비밀번호를 입력해주세요." pattern="^(?=.*[A-Za-z])(?=.*\d|.*[!@#$%^&*])[A-Za-\d!@#$%^&*]{8,}&" title="비밀번호를 입력해주세요" required>
+            <p class="desc-tt pw-rule">8자 이상 영문,숫자,특수문자 중 2개 이상 조합으로 입력해주세요.</p>
+            <p class="desc-tt pw-rule">4개 이상 연속되거나 동일한 문자/숫자는 사용할 수 없어요.</p>
           </dd>
           <dt class="menu-tt">
-            <label for="passwordConfirm">비밀번호 확인 <span class="error">*</span></label>
+            <label for="passwordConfirm">비밀번호 확인 <span class="red">*</span></label>
           </dt>
           <dd>
-            <input type="password" id="passwordConfirm" name="passwordConfirm" placeholder="비밀번호를 한번 더 입력해주세요." required>
-            <p class="desc-tt hidden" aria-live=”polite”>비밀번호가 일치하지 않습니다.</p>
+            <input type="password" id="passwordConfirm" name="passwordConfirm" placeholder="비밀번호를 한번 더 입력해주세요." title="비밀번호를 한번 더 입력해주세요" required>
+            <p class="desc-tt pwHint" aria-live="polite">비밀번호가 일치하지 않습니다.</p>
           </dd>
           <dt class="menu-tt">
-            <label for="tel">휴대전화번호 <span class="error">*</span></label>
+            <label for="tel">휴대전화번호 <span class="red">*</span></label>
           </dt>
           <dd>
-            <input type="tel" id="tel" name="tel" placeholder="휴대전화 번호를 입력해주세요." required>
-            <button type="button" class="sm desc-tt">인증</button>
+            <input type="tel" id="tel" name="tel" placeholder="휴대전화 번호를 입력해주세요." title="휴대전화 번호를 입력해주세요" required>
+            <button type="button" class="sm certify desc-tt">인증</button>
           </dd>
           <dt class="menu-tt">
-            <label for="email">이메일 <span class="error">*</span></label>
+            <label for="email">이메일 <span class="red">*</span></label>
           </dt>
           <dd>
-            <input type="email" id="email" name="email" placeholder="이메일을 입력해주세요." required>
+            <input type="email" id="email" name="email" placeholder="이메일을 입력해주세요." title="이메일을 입력해주세요" required>
           </dd>
           <dt class="menu-tt">
             <label for="year">생년월일</label>
           </dt>
           <dd>
             <div>
-              <input type="text" id="year" name="year" placeholder="년 (4자리)">
+              <input type="text" id="year" name="year" placeholder="년 (4자리)" title="년 (4자리)">
             </div>
             <div>
-              <input type="text" id="month" name="month" placeholder="월">
+              <input type="text" id="month" name="month" placeholder="월" title="월">
             </div>
             <div>
-              <input type="text" id="day" name="day" placeholder="일">
+              <input type="text" id="day" name="day" placeholder="일" title="일">
             </div>
           </dd>
         </dl>
         <div class="termsList">
           <div class="top">
             <input type="checkbox" id="agreeAll" name="agreeAll">
-            <span class="box"><img src="/images/signin/Vector (Stroke).png" alt=""></span>
+            <span class="box active"></span>
             <label for="agreeAll" class="h4-tt">전체동의</label>
           </div>
           <ul>
             <li>
               <input type="checkbox" id="age" name="age" required>
-              <span class="box"><img src="/images/signin/Vector (Stroke).png" alt=""></span>
+              <span class="box"></span>
               <label for="age" class="body2-tt">14세 이상입니다 (필수)</label>
             </li>
-            <li>
+            <li class="seeList">
               <input type="checkbox" id="terms" name="terms" required>
-              <span class="box"><img src="/images/signin/Vector (Stroke).png" alt=""></span>
+              <span class="box"></span>
               <label for="terms" class="body2-tt">이용약관 동의 (필수)</label>
               <a href="" class="body2-tt see">보기</a>
             </li>
             <li>
               <input type="checkbox" id="ind" name="ind" required>
-              <span class="box"><img src="/images/signin/Vector (Stroke).png" alt=""></span>
+              <span class="box"></span>
               <label for="ind" class="body2-tt">개인정보 수집 및 이용동의 (필수)</label>
             </li>
-            <div class="description desc-tt">
-              <div>
-                <p>목적</p>
-                <p>개인식별, 서비스 이용을 위한 연락처</p>
-              </div>
-              <div>
-                <p>항목</p>
-                <p>1. iOS 이외 : 이름, 아이디, 비밀번호, 휴대전화번호, 이메일</p>
-                <p>2. iOS : 아이디, 비밀번호</p>
-              </div>
-              <div>
-                <p>보유기간</p>
-                <p>회원탈퇴 시 즉시 파기</p>
-              </div>
-              <div>
-                <p>개인정보 수집 및 이용 동의를 거부할 권리</p>
-                <p>이용자는 개인정보의 수집 및 이용 동의를 거부할 권리가 있습니다. 회원가입 시 수집하는 최소한의 개인정보, 즉 필수 항목에 대한 수집 및 이용 동의를 거부하실 경우, 회원가입이 어려울 수 있습니다.</p>
-              </div>
-            </div>
             <li>
+              <div class="description desc-tt">
+                <div>
+                  <p>목적</p>
+                  <p>개인식별, 서비스 이용을 위한 연락처</p>
+                </div>
+                <div>
+                  <p>항목</p>
+                  <p>1. iOS 이외 : 이름, 아이디, 비밀번호, 휴대전화번호, 이메일</p>
+                  <p>2. iOS : 아이디, 비밀번호</p>
+                </div>
+                <div>
+                  <p>보유기간</p>
+                  <p>회원탈퇴 시 즉시 파기</p>
+                </div>
+                <div>
+                  <p>개인정보 수집 및 이용 동의를 거부할 권리</p>
+                  <p>이용자는 개인정보의 수집 및 이용 동의를 거부할 권리가 있습니다. 회원가입 시 수집하는 최소한의 개인정보, 즉 필수 항목에 대한 수집 및 이용 동의를 거부하실 경우, 회원가입이 어려울 수 있습니다.</p>
+                </div>
+              </div>
+            </li>
+            <li class="seeList">
               <input type="checkbox" id="ano" name="ano" required>
-              <span class="box"><img src="/images/signin/Vector (Stroke).png" alt=""></span>
+              <span class="box"></span>
               <label for="ano" class="body2-tt">개인정보 제3자 제공 동의 (필수)</label>
               <a href="" class="body2-tt see">보기</a>
             </li>
             <li>
               <input type="checkbox" id="cho" name="cho">
-              <span class="box"><img src="/images/signin/Vector (Stroke).png" alt=""></span>
+              <span class="box"></span>
               <label for="cho" class="body2-tt">선택정보 수집 및 이용동의 (선택)</label>
             </li>
-            <div class="description desc-tt">
-              <div>
-                <p>목적</p>
-                <p>맞춤 정보 제공, 마케팅</p>
+            <li>
+              <div class="description desc-tt">
+                <div>
+                  <p>목적</p>
+                  <p>맞춤 정보 제공, 마케팅</p>
+                </div>
+                <div>
+                  <p>항목</p>
+                  <p>1. iOS 이외 : 성별, 생년월일
+                    2. iOS : 이름, 성별, 생년월일, 휴대전화번호, 이메일</p>
+                </div>
+                <div>
+                  <p>보유기간</p>
+                  <p>회원탈퇴 시 즉시파기</p>
+                </div>
               </div>
-              <div>
-                <p>항목</p>
-                <p>1. iOS 이외 : 성별, 생년월일
-                  2. iOS : 이름, 성별, 생년월일, 휴대전화번호, 이메일</p>
-              </div>
-              <div>
-                <p>보유기간</p>
-                <p>회원탈퇴 시 즉시파기</p>
-              </div>
-            </div>
+            </li>
             <li>
               <input type="checkbox" id="sms" name="sms">
-              <span class="box"><img src="/images/signin/Vector (Stroke).png" alt=""></span>
+              <span class="box"></span>
               <label for="sms" class="body2-tt">SMS 정보 수신</label>
             </li>
             <li>
               <input type="checkbox" id="info" name="info">
-              <span class="box"><img src="/images/signin/Vector (Stroke).png" alt=""></span>
+              <span class="box"></span>
               <label for="info" class="body2-tt">이메일 정보 수신</label>
             </li>
           </ul>
@@ -163,6 +167,6 @@
     </section>
   </main>
   <footer id="footer"></footer>
-  <script type="module" src="/js/best.js"></script>
+  <script type="module" src="/js/signin.js"></script>
 </body>
 </html>
