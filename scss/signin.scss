@@ -10,10 +10,10 @@ main{
   display: flex;
   flex-direction: column;
   width: 700px;
-  height: 2218px;
   background: #fff;
   padding: 0 50px;
   margin: 0 auto;
+  border-bottom: 1px solid $g50;
   form > h3{
     padding: 27px 0;
   }
@@ -33,21 +33,11 @@ main{
   height: 70px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  padding-right: 120px;
+  justify-content: space-around;
+  padding: 0 100px;
 }
-
 .formList label{
   position: relative;
-}
-.formList dd .hint{
-  position: absolute;
-  color:$g75;
-  padding: 18px 12px;
-  pointer-events: none;
-}
-.hide{   //선택시 hide로 가리기
-  display:none;
 }
 .formList dd:last-child{
   display: flex;
@@ -74,31 +64,29 @@ main{
     right:0;
     margin: 11px 12px;
   }
-  .pwHint{
-    color:$g100;
-  }
 }
-.hidden{
-  opacity: 0;
+.pw-rule{
+  color:$g100;
+}
+.pw-rule.error{
+  color: $error;
+}
+.pwHint{
+  display: none;
+}
+.pwHint.error{
   display: inline;
-}
-.active{   // 비밀번호 불일치시
-  opacity:1;
-  display:block;
   color: $error;
 }
-.error{
+.red{
   color: $error;
-}
-
-.see{
-  text-decoration: underline;
-  color:$g75;
 }
 .description{
+  width: 100%;
   border: 1px solid $g75;
   padding: 0 10px;
-  margin-top: 20px;
+  overflow-y: scroll;
+  height: 150px;
   div p{
     color: $g100;
   }
@@ -108,16 +96,17 @@ main{
 }
 .termsList{
   border: 1px solid $g75;
-  input{
-    display: none;
-  }
   .top{
-    padding: 13px 0 12px 23px;
+    display: flex;
+    gap:10px;
+    padding: 13px 0 12px 20px;
     border-bottom: 1px solid $g75;
   }
   ul{
     padding: 20px 20px 81px 20px;
     li{
+      display: flex;
+      gap:10px;
       padding-bottom: 20px;
       label{
         color:$g200;
@@ -128,9 +117,36 @@ main{
     }
   }
 }
-.termsList ul li:nth-child(2), li:nth-child(4){
+.see{
+  text-decoration: underline;
+  color:$g75;
+  margin-left: auto;
+}
+.seeList{
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+}
+.termsList input{
+  display: none;
+}
+.box{
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: $g50;
+  border-radius: 2px;
+  background-image: url('/images/signin/VectorStroke.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.termsList input:checked + .box{
+  display: inline-block;
+  background: $b300;
+  width: 24px;
+  height: 24px;
+  background-image: url('/images/signin/VectorStrokeOn.png');
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .big{
   width: 600px;
@@ -139,4 +155,22 @@ main{
   background: $g100;
   border-radius: 4px;
   margin-bottom: 81px;
+}
+
+@media (max-width:768px){
+  main{
+    display: flex;
+    background: none;
+  }
+  .wrapper{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    form{
+      padding: 16px;
+    }
+  }
+  .title, .kakao, .big{
+    width: 100%;
+  }
 }
