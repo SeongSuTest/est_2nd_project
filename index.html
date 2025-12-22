@@ -5,10 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>라운즈 ROUNZ</title>
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
-  />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/common.css" />
   <link rel="stylesheet" href="./css/main.css" />
 </head>
@@ -25,12 +22,12 @@
           <h2 class="h2-tt">안경테</h2>
           <p class="body2-tt">말하지 않아도 드러나는 무드</p>
         </div>
-        <button type="link" class="bold-tt">안경테 전체보기</button>
+        <a href="" class="bold-tt">안경테 전체보기</a>
         <img src="/images/main-slide-item/icon_arrow_right.png" alt="전체보기">
       </aside>
       <div class="slide-wrapper swiper">
-        <ul class="slideItems swiper-wrapper">
-          
+        <ul id="glassList" class="slideItems swiper-wrapper" data-cateegory="glass">
+<!--           
           <li class="swiper-slide">
             <a href="상세보기 링크">
               <div class="thumb">
@@ -46,7 +43,7 @@
               </dl>
             </a>
           </li>
-           
+           -->
         </ul>
       </div>
     </section>
@@ -56,11 +53,11 @@
           <h2 class="h2-tt">선글라스</h2>
           <p class="body2-tt">무심하게 멋있는 순간</p>
         </div>
-        <button type="link" class="bold-tt">선글라스 전체보기</button>
+        <a href="" class="bold-tt">선글라스 전체보기</a>
         <img src="/images/main-slide-item/icon_arrow_right.png" alt="전체보기">
       </aside>
-      <div class="slide-wrapper">
-        <ul class="slideItems">
+      <div class="slide-wrapper swiper">
+        <ul id="sunglassList" class="slideItems swiper-wrapper" data-cateegory="sunglass">
           <!-- 
           <li>
             <a href="상세보기 링크">
@@ -87,11 +84,11 @@
           <h2 class="h2-tt">할인 상품</h2>
           <p class="body2-tt">회원 전용 <span class="sale">할인</span> 행사</p>
         </div>
-        <button type="link" class="bold-tt">할인중인 상품 전체보기</button>
+        <a href="" class="bold-tt">할인중인 상품 전체보기</a>
         <img src="/images/main-slide-item/icon_arrow_right.png" alt="전체보기">
       </aside>
-      <div class="slide-wrapper">
-        <ul class="slideItems">
+      <div class="slide-wrapper swiper">
+        <ul id="saleList" class="slideItems swiper-wrapper" data-cateegory="sale">
           <!--
           <li>
             <a href="상세보기 링크">
