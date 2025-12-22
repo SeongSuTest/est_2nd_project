@@ -145,10 +145,6 @@ main {
   align-items: center;
 }
 
-.termsList input {
-  display: none;
-}
-
 .box {
   display: inline-block;
   width: 24px;
