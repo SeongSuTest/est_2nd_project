@@ -234,7 +234,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -636,12 +637,15 @@ html {
 
 @media (max-width: 1199px) {
   header {
-    position: relative;
+    position: sticky;
+    top: 0;
+    background: white;
     display: flex;
     padding: 0 8px 0 23px;
     height: 54px;
     align-items: center;
     border-bottom: 1px solid #1a1a1a;
+    z-index: 9999;
   }
   header .rounz-main-logo img {
     height: 20px;
@@ -671,9 +675,11 @@ html {
   }
   header.is-menu-open > ul {
     display: block;
+    z-index: 9998;
   }
   header.is-menu-open .menu-child {
     display: block;
+    z-index: 9999;
   }
   header .header-actions {
     margin-left: auto;
@@ -742,11 +748,15 @@ html {
 }
 @media (min-width: 1200px) {
   header {
+    position: sticky;
+    top: 0;
+    background: white;
     height: 80px;
     display: flex;
     padding: 0 38px;
     align-items: center;
     border-bottom: 1px solid #1a1a1a;
+    z-index: 9999;
   }
   header .rounz-main-logo {
     margin-right: 55px;
