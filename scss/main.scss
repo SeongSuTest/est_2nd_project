@@ -2,26 +2,66 @@
 
 /* 메인 슬라이드 */
 .slideItemsWrapper{
+  width: 1052px;
   display: grid;
+  overflow: hidden;
   grid-template-columns: 252px 1fr;
   gap:16px;
+  border-bottom: 1px solid $g50;
+  margin-bottom: 54px;
   div{
     gap:8px;
     p{
       margin-bottom: 27px;
     }
   }
+  button{
+    color:$b300;
+    padding-right: 10px;
+  }
+}
+.slideItemsWrapper:last-child{
+  border-bottom: 0;
+  margin-bottom: 0;
+}
+.slide-wrapper{
+  width: 100%;
+  overflow: hidden;
+  height: 465px;
 }
 .slideItems{
-  display: grid;
-  grid-template-columns: repeat(3,3fr);
-  gap:16px;
-  padding-bottom: 54px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  li{
+    display: flex;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    list-style: none;
+  }
 }
 .slideItems dd:last-child{
   display: flex;
   gap:8px;
 }
-.glassDesc dd p{
+.glassDesc dt{
+  color:$g100;
+}
+.glassDesc dd:first-child{
+  color:$g400;
+}
+.glassDesc dd span{
   color: $error;
 }
+.sale{
+  color: $error;
+}
+.swiper {
+  width: 100%;
+}
+/*  메인 슬라이드 끝  */
