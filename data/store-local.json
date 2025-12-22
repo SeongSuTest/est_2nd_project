@@ -24,12 +24,100 @@
       "sido": "경기도",
       "sigunguList": [
         {
-          "sigungu": "수원시"
+          "sigungu": "광명시"
         },
+        {
+          "sigungu": "남양주시"
+        },
+        {
+          "sigungu": "성남시"
+        },
+        {
+          "sigungu": "수원시"
+        },        
         {
           "sigungu": "성남시"
         }
       ]
+    },
+    {
+      "sido": "충청남도",
+      "sigunguList": [
+        {
+          "sigungu": "천안시"
+        }        
+      ]
+    },
+    {
+      "sido": "강원도",
+      "sigunguList": [
+        {
+          "sigungu": "속초시"
+        }        
+      ]
+    },
+    {
+      "sido": "경상북도",
+      "sigunguList": [
+        {
+          "sigungu": "경산시"
+        }        
+      ]
+    },
+    {
+      "sido": "인천광역시",
+      "sigunguList": [
+        {
+          "sigungu": "서구"
+        }        
+      ]
+    },
+    {
+      "sido": "세종특별자치시",
+      "sigunguList": [
+        {
+          "sigungu": "나성동"
+        }        
+      ]
+    },
+    {
+      "sido": "울산광역시",
+      "sigunguList": [
+        {
+          "sigungu": "동구"
+        },
+        {
+          "sigungu": "남구"
+        },
+        {
+          "sigungu": "중구"
+        },
+        {
+          "sigungu": "북구"
+        }
+      ]
+    },
+    {
+      "sido": "대전광역시",
+      "sigunguList": [
+        {
+          "sigungu": "동구"
+        },
+        {
+          "sigungu": "대덕구"
+        },
+        {
+          "sigungu": "서구"
+        },
+        {
+          "sigungu": "유성구"
+        },
+        {
+          "sigungu": "중구"
+        }
+      ]
     }
+
+    
   ]
 }

@@ -77,19 +77,26 @@ main section {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: solid 1px #eaeaea;
   height: 80px;
+}
+.store-ct .store-ct-tab .store-tab a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: solid 1px #eaeaea;
   transition: 0.3s;
   color: #a8a8a8;
 }
 .store-ct .store-ct-tab .store-tab:last-of-type {
   border-left: none;
 }
-.store-ct .store-ct-tab .store-tab:hover {
+.store-ct .store-ct-tab .store-tab:hover a {
   color: #0007b2;
   border-color: #0007b2;
 }
-.store-ct .store-ct-tab .store-tab.active {
+.store-ct .store-ct-tab .store-tab.active a {
   border-color: #0007b2;
   background: #0007b2;
   color: #fff;
@@ -105,9 +112,12 @@ main section {
   justify-content: space-between;
 }
 .store-ct .label-checkbox {
-  display: flex;
   align-items: center;
   gap: 6px;
+  display: none;
+}
+.store-ct .label-checkbox.active {
+  display: flex;
 }
 .store-ct .label-checkbox label {
   display: flex;
@@ -132,7 +142,7 @@ main section {
 .store-ct .store-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+  gap: 54px 16px;
 }
 .store-ct .store-content {
   display: none;
@@ -161,7 +171,15 @@ main section {
 .store-ct .store-list-box {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  justify-content: space-between;
+  gap: 4px;
+  height: 100%;
+}
+.store-ct .store-list-box .store-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 4px;
 }
 .store-ct .store-list-box .store-name {
   display: flex;
@@ -180,8 +198,10 @@ main section {
 .store-ct .store-list-box p.desc-tt {
   color: #848484;
 }
-.store-ct .store-list-box p.body-tt {
+.store-ct .store-list-box p.road-tt {
   color: #1e1e1e;
+  line-height: 1.4;
+  font-weight: 500;
 }
 .store-ct .store-list-box a.tel-tt {
   color: #848484;
@@ -190,7 +210,7 @@ main section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 16px;
+  gap: 8px;
   margin-top: 16px;
 }
 .store-ct .store-list-box .store-btn a {
@@ -254,6 +274,18 @@ main section {
   height: 24px;
   color: #ffffff;
 }
+.store-page #numbers {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.store-foot > div {
+  display: none;
+}
+.store-foot > div.active {
+  display: flex;
+}
 
 .btn-arrow {
   width: 12px;
@@ -265,6 +297,9 @@ main section {
 }
 .btn-arrow:hover {
   background-image: url("../images/store/icon_arrow_right_hover.svg");
+}
+.btn-arrow.btn-white {
+  background-image: url("../images/store/icon_arrow_right_white.svg");
 }
 
 .store-prev,
@@ -309,7 +344,7 @@ main section {
   height: 48px;
   line-height: 48px;
   padding: 0 12px;
-  min-width: 120px;
+  min-width: 160px;
 }
 
 select::-ms-expand {
@@ -325,4 +360,96 @@ select {
 
 select {
   background: url("../images/store/icon_arrow_select.png") no-repeat calc(100% - 12px) center/11px auto;
+}
+
+.store-foot-direct {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f4fa;
+  gap: 108px;
+  padding: 54px 0;
+}
+.store-foot-direct .store-ct-slide-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 560px;
+  height: 360px;
+}
+.store-foot-direct .store-ct-slide-container {
+  position: relative;
+  width: 480px;
+  height: 360px;
+  overflow: hidden;
+}
+.store-foot-direct .store-ct-slide-container ul {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  transition: 0.5s ease-out;
+}
+.store-foot-direct .store-ct-slide-container li {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.store-foot-direct .store-ct-slide-container img {
+  width: 100%;
+}
+.store-foot-direct .store-foot-slide-btn {
+  width: 100%;
+  top: 50%;
+  height: 40px;
+  position: absolute;
+  transform: translateY(-50%);
+}
+.store-foot-direct .store-foot-slide-btn button {
+  position: absolute;
+  display: inline-flex;
+  width: 24px;
+  height: 40px;
+}
+.store-foot-direct .store-foot-slide-btn #foot-slide-prevbtn {
+  right: 100%;
+}
+.store-foot-direct .store-foot-slide-btn #foot-slide-nextbtn {
+  left: 100%;
+}
+.store-foot-direct .store-ct-bullet {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  bottom: 12px;
+}
+.store-foot-direct .store-ct-bullet span {
+  display: inline-flex;
+  width: 9px;
+  height: 9px;
+  background: #ffffff;
+}
+.store-foot-direct .store-ct-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.store-foot-direct .store-chain h4 {
+  color: #0007b2;
+  margin-bottom: 16px;
+}
+.store-foot-direct .store-chain .btn {
+  color: #ffffff;
+  background: #0007b2;
+  display: inline-flex;
+  padding: 0 24px;
 }/*# sourceMappingURL=store.css.map */
