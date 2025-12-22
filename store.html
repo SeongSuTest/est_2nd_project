@@ -231,8 +231,15 @@
   <footer id="footer">
 
   </footer>
+  <script type="module">
+    import { renderHeader } from "/js/modules/header.js";
+    import { renderFooter } from "/js/modules/footer.js";
 
-  <script type="module" src="js/main.js"></script>
+    document.addEventListener("DOMContentLoaded", () => {
+      renderHeader();
+      renderFooter();
+    });
+  </script>
   <script type="module" src="js/store.js"></script>
 </body>
 
