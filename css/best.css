@@ -81,4 +81,30 @@ ul {
 }
 .best-items li {
   width: 254px;
+}
+.best-items li .item-image {
+  position: relative;
+}
+.best-items li .item-image .like-button {
+  position: absolute;
+  bottom: 13px;
+  right: 12px;
+}
+.best-items li .item-brand {
+  color: #848484;
+}
+.best-items li h3 {
+  color: #1e1e1e;
+}
+.best-items li .item-price span {
+  color: #ff2d2d;
+  margin-right: 8px;
+}
+.best-items li a {
+  display: inline-block;
+  margin-top: 16px;
+  border-radius: 4px;
+  background: #f4f4fa;
+  padding: 0 8px;
+  color: #0007b2;
 }/*# sourceMappingURL=best.css.map */

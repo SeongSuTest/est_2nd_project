@@ -82,5 +82,34 @@ ul {
   }
   li {
     width: 254px;
+    .item-image {
+      position: relative;
+      .like-button {
+        position: absolute;
+        bottom: 13px;
+        right: 12px;
+      }
+    }
+
+    .item-brand {
+      color: $g100;
+    }
+    h3 {
+      color: $g400;
+    }
+    .item-price {
+      span {
+        color: $error;
+        margin-right: 8px;
+      }
+    }
+    a {
+      display: inline-block;
+      margin-top: 16px;
+      border-radius: 4px;
+      background: $bg;
+      padding: 0 8px;
+      color: $b300;
+    }
   }
 }
