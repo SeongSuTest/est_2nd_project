@@ -21,13 +21,13 @@ export function renderFooter() {
     </div>
     <div class="footer-business">
       <button>(주)라운즈 ROUNZ 사업자 정보</button>
-      <img src="../images/footer/icon_arrow_right.png" alt="" />
+      <img src="images/footer/icon_arrow_right.png" alt="" />
     </div>
     <div class="footer-icon">
-      <a href="/"><img src="../images/footer/btn_kcp 1.png" alt="" /></a>
-      <a href="/"><img src="../images/footer/bg_insta_gray 1.png" alt="" /></a>
-      <a href="/"><img src="../images/footer/bg_fb_gray 1.png" alt="" /></a>
-      <a href="/"><img src="../images/footer/bg_blog_gray 1.png" alt="" /></a>
+      <a href="/"><img src="images/footer/btn_kcp 1.png" alt="" /></a>
+      <a href="/"><img src="images/footer/bg_insta_gray 1.png" alt="" /></a>
+      <a href="/"><img src="images/footer/bg_fb_gray 1.png" alt="" /></a>
+      <a href="/"><img src="images/footer/bg_blog_gray 1.png" alt="" /></a>
     </div>
   `;
 }
