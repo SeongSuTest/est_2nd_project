@@ -15,7 +15,7 @@ const nextBtn = document.querySelector('#store-next');
 const pagination = document.querySelector('#numbers');
 
 
-const perPage = 8;
+const perPage = 12;
 let currentPage = 1;
 let totalPages = 0;
 let rounzLensFilter = false;
@@ -266,32 +266,115 @@ storeTab.forEach((st, idx) => {
 loadStores();
 
 const slideWrapper = document.querySelector('.store-ct-slide-wrap');
-const slideContainer = slideWrapper.querySelector('.store-ct-slide-container ul');
+const slideContainer = slideWrapper.querySelector('.store-ct-slide-container');
+const slideContainerUl = slideWrapper.querySelector('.store-ct-slide-container ul');
 const slides = slideContainer.querySelectorAll('li');
 const slidePrevbtn = slideWrapper.querySelector('#foot-slide-prevbtn')
 const slideNextbtn = slideWrapper.querySelector('#foot-slide-nextbtn')
+const sldieBullets = slideWrapper.querySelector('#store-ct-bullet')
+const footPager = slideWrapper.querySelector('#store-foot-pager')
 
 const slideCount = slides.length;
 let currentIdx = 0;
+let slideTimer;
 
-// 슬라이드 있으면 가로로 배열
-slides.forEach((item, idx) => {
-  item.style.left = idx * 100 + '%';
-});
-
-// 슬라이드 이동함수(이동, 페이저, 슬라이드 활성화)
-function moveSlide(idx) {
-  slideContainer.style.left = -idx * 100 + '%';
-  currentIdx = idx;
+function slideLayout() {
+  slideContainerUl.style.width = slideContainer.offsetWidth * slideCount + 'px';
 }
 
+//브라우저 사이즈 줄일 때 넓이 값 다시 계산
+window.addEventListener('resize', () => {
+  slideLayout();
+});
+slideLayout();
+
+
+//페이지 버튼 생성
+let footPagerHTML = '';
+for (let i = 0; i < slideCount; i++) {
+  footPagerHTML += `<a href="">${i}</a>`;
+}
+footPager.innerHTML = footPagerHTML;
+
+//페이지 버튼 이동
+const footPagerBtn = footPager.querySelectorAll('a');
+footPagerBtn.forEach((pager, idx) => {
+  pager.addEventListener('click', (e) => {
+    e.preventDefault();
+    moveSlide(idx);
+    resetTimer();
+  });
+})
+
+//슬라이드 idx 0부터 시작
+moveSlide(0);
+
+
+//자동 슬라이드 타이머
+function startTimer() {
+  slideTimer = setInterval(() => {
+    let nextIdx = (currentIdx + 1) % slideCount;
+    moveSlide(nextIdx);
+  }, 4000);
+}
+// 자동 슬라이드 타이머 정지
+function resetTimer() {
+  clearInterval(slideTimer);
+  startTimer();
+}
+
+
+//슬라이드 이동함수(이동, 페이저, 슬라이드 활성화)
+function moveSlide(idx) {
+  slideContainerUl.style.left = -idx * 100 + '%';
+  currentIdx = idx;
+
+  for (let fpb of footPagerBtn) {
+    fpb.classList.remove('active');
+  }
+  footPagerBtn[idx].classList.add('active')
+}
+
+
+//이전, 다음 버튼 클릭 이벤트
 slideNextbtn.addEventListener('click', () => {
-  let nextIdx = (currentIdx + 1) % slideCount;
-  moveSlide(nextIdx);
+  nextSlide();
 });
 slidePrevbtn.addEventListener('click', () => {
+  pervSlide();
+});
+
+//왼쪽 키, 오른쪽 키 클릭
+document.querySelector('.store-foot').addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowLeft') {
+    pervSlide();
+  } else if (e.key === 'ArrowRight') {
+    nextSlide();
+  }
+});
+
+//다음, 이전 슬라이드 함수
+function nextSlide() {
+  let nextIdx = (currentIdx + 1) % slideCount;
+  moveSlide(nextIdx);
+  resetTimer();
+}
+function pervSlide() {
   let prevIdx = (currentIdx - 1 + slideCount) % slideCount;
   moveSlide(prevIdx);
-})
+  resetTimer();
+}
+
+startTimer();
+
+// 슬라이드에 마우스 올리면 setInterval 멈춤
+slideWrapper.addEventListener('mouseenter', () => {
+  clearInterval(slideTimer);
+});
+// 슬라이드에 마우스 떼면 setInterval 다시 시작
+slideWrapper.addEventListener('mouseleave', () => {
+  startTimer();
+});
+
 
 
