@@ -32,7 +32,7 @@ main {
 }
 
 .kakao {
-  background: #FEE500;
+  background: #fee500;
   width: 600px;
   height: 70px;
   display: flex;
@@ -155,7 +155,7 @@ main {
   height: 24px;
   background: #eaeaea;
   border-radius: 2px;
-  background-image: url("/images/signin/VectorStroke.png");
+  background-image: url("images/signin/VectorStroke.png");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -165,7 +165,7 @@ main {
   background: #0007b2;
   width: 24px;
   height: 24px;
-  background-image: url("/images/signin/VectorStrokeOn.png");
+  background-image: url("images/signin/VectorStrokeOn.png");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -192,7 +192,9 @@ main {
   .wrapper form {
     padding: 16px;
   }
-  .title, .kakao, .big {
+  .title,
+  .kakao,
+  .big {
     width: 100%;
   }
 }/*# sourceMappingURL=signin.css.map */
