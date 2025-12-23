@@ -30,7 +30,7 @@ const saleEl = document.querySelector("#saleList");
 
 let listData = [];
 
-fetch("/data/main-slide-item.json")
+fetch("data/main-slide-item.json")
   .then((res) => res.json())
   .then((result) => {
     const products = result.mainProducts;
