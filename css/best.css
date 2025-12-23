@@ -110,21 +110,6 @@
 .best-items li .item-image > img {
   width: 100%;
 }
-.best-items li .item-image .like-button {
-  position: absolute;
-  bottom: 13px;
-  right: 12px;
-}
-.best-items li .item-image .soldout-badge {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  padding: 6px 10px;
-  border-radius: 4px;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  font-size: 12px;
-}
 .best-items li .item-brand {
   color: #848484;
 }
@@ -135,7 +120,7 @@
   color: #ff2d2d;
   margin-right: 8px;
 }
-.best-items li a {
+.best-items li .best-store-button {
   display: inline-block;
   margin-top: 16px;
   border-radius: 4px;
@@ -143,9 +128,15 @@
   padding: 0 8px;
   color: #0007b2;
 }
+.best-items li .like-button {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+}
 
 .page-button {
   margin-top: 24px;
+  margin-bottom: 20px;
 }
 .page-button ul {
   justify-content: center;
@@ -154,14 +145,13 @@
 .page-button button {
   min-width: 36px;
   height: 36px;
-  border-radius: 6px;
-  border: 1px solid #a8a8a8;
   background: #fff;
   color: #1e1e1e;
 }
 .page-button button.active {
-  border-color: #0007b2;
-  color: #0007b2;
+  color: white;
+  background: #0007b2;
+  border-radius: 18px;
 }
 .page-button button:disabled {
   opacity: 0.4;

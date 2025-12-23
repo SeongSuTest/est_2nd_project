@@ -107,23 +107,6 @@
       > img {
         width: 100%;
       }
-
-      .like-button {
-        position: absolute;
-        bottom: 13px;
-        right: 12px;
-      }
-
-      .soldout-badge {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        padding: 6px 10px;
-        border-radius: 4px;
-        background: rgba(0, 0, 0, 0.6);
-        color: #fff;
-        font-size: 12px;
-      }
     }
 
     .item-brand {
@@ -138,7 +121,7 @@
         margin-right: 8px;
       }
     }
-    a {
+    .best-store-button {
       display: inline-block;
       margin-top: 16px;
       border-radius: 4px;
@@ -146,12 +129,18 @@
       padding: 0 8px;
       color: $b300;
     }
+    .like-button {
+      position: absolute;
+      right: 12px;
+      bottom: 12px;
+    }
   }
 }
 
 // pagination
 .page-button {
   margin-top: 24px;
+  margin-bottom: 20px;
 
   ul {
     justify-content: center;
@@ -161,14 +150,15 @@
   button {
     min-width: 36px;
     height: 36px;
-    border-radius: 6px;
-    border: 1px solid $g75;
     background: #fff;
     color: $g400;
 
     &.active {
-      border-color: $b300;
-      color: $b300;
+      // border-color: $b300;
+      // color: $b300;
+      color: white;
+      background: $b300;
+      border-radius: 18px;
     }
 
     &:disabled {

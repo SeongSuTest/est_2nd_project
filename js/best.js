@@ -122,21 +122,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
       return `
           <li>
-            <div class="item-image">
-              <img src="${p.image}" alt="${p.title}" width="254"/>
-              <button class="like-button" type="button" aria-label="좋아요">
-                <img src="${LIKE_ICON}" alt="" />
-              </button>
-            </div>
+            <a>
+              <div class="item-image">
+                <img src="${p.image}" alt="${p.title}" width="254"/>
+                <div class="like-button">
+                  <img src="${LIKE_ICON}" alt="" />
+                </div>
+              </div>
 
-            <div class="item-description">
-              <p class="desc-tt item-brand">${p.brand}</p>
-              <h3 class="body-tt">${p.title}</h3>
-              ${soldout ? `<p class="h4-tt item-price">일시품절</p>` : `<p class="h4-tt item-price"><span>${discount}%</span>${Number(price).toLocaleString("ko-KR")}원</p>`}
-            </div>
-
-            <a class="desc-tt" href="#">안경원에서 써보기</a>
+              <div class="item-description">
+                <p class="desc-tt item-brand">${p.brand}</p>
+                <h3 class="body-tt">${p.title}</h3>
+                ${soldout ? `<p class="h4-tt item-price">일시품절</p>` : `<p class="h4-tt item-price"><span>${discount}%</span>${Number(price).toLocaleString("ko-KR")}원</p>`}
+              </div>
+            </a>
+            <a class="desc-tt best-store-button" href="./store.html">안경원에서 써보기</a>
           </li>
+          
         `;
     });
 

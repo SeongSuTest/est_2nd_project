@@ -3,14 +3,14 @@ export function renderHeader() {
 
   header.innerHTML = `
     <h1 class="visually-hidden">ROUNZ</h1>
-    <a class="rounz-main-logo" href="/"><img src="images/logo/rounz-logo.png" alt="라운즈 메인" /></a>
+    <a class="rounz-main-logo" href="./"><img src="images/logo/rounz-logo.png" alt="라운즈 메인" /></a>
     <ul class="menu-tt">
       <li><button type="button" class="active">안경테</button></li>
       <li><button type="button">선글라스</button></li>
-      <li><button type="button">베스트</button></li>
+      <li><a href="./best.html">베스트</a></li>
       <li><button type="button">브랜드</button></li>
       <li><button type="button">라운즈 ONLY</button></li>
-      <li><button type="button">안경원</button></li>
+      <li><a href="./store.html">안경원</a></li>
       <li><button type="button">신상품</button></li>
       <li><button type="button">기획전</button></li>
       <li><button type="button">시리즈</button></li>
@@ -19,7 +19,7 @@ export function renderHeader() {
     </ul>
     <div class="header-actions">
       <button><img src="images/header/icon_header_search.png" height="16" alt="검색" /></button>
-      <a href="/"><img src="images/header/icon_header_user.png" height="16" alt="마이페이지" /></a>
+      <a href="./signin.html"><img src="images/header/icon_header_user.png" height="16" alt="마이페이지" /></a>
       <a class="cart-button" href="/"><img src="images/header/icon_header_cart.png" height="16" alt="장바구니" /></a>
       <button type="button" class="mobile-menu-button">
         <div class="header-menu-button">

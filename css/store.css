@@ -520,7 +520,8 @@ section.store-foot {
 }
 .store-foot-direct .store-ct-slide-container img {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .store-foot-direct .store-foot-slide-btn {
   width: 100%;
@@ -639,7 +640,8 @@ section.store-foot {
 .store-foot-partner .store-ct-img img {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   vertical-align: middle;
 }
 .store-foot-partner .store-ct-text {
