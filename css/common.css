@@ -659,7 +659,8 @@ html {
     width: 100vw;
     height: 100vh;
   }
-  header > ul li button {
+  header > ul li button,
+  header > ul li a {
     display: flex;
     padding-left: 24px;
     align-items: center;
@@ -767,6 +768,11 @@ html {
   header ul {
     display: flex;
     gap: 21px;
+  }
+  header ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   header ul li button {
     padding-left: 0px;

@@ -173,7 +173,8 @@ html {
       width: 100vw;
       height: 100vh;
       li {
-        button {
+        button,
+        a {
           display: flex;
           padding-left: 24px;
           align-items: center;
@@ -295,6 +296,9 @@ html {
       display: flex;
       gap: 21px;
       li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         button {
           padding-left: 0px;
           height: 80px;
