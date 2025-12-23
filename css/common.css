@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 html,
@@ -233,7 +234,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -619,13 +621,13 @@ html {
   border: 0;
 }
 
+/* 12-22 변경 */
 .btn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 4px;
-  height: 48px;
-  line-height: 48px;
+  padding: 16px;
 }
 
 .btn-line {
@@ -635,12 +637,15 @@ html {
 
 @media (max-width: 1199px) {
   header {
-    position: relative;
+    position: sticky;
+    top: 0;
+    background: white;
     display: flex;
     padding: 0 8px 0 23px;
     height: 54px;
     align-items: center;
     border-bottom: 1px solid #1a1a1a;
+    z-index: 9999;
   }
   header .rounz-main-logo img {
     height: 20px;
@@ -654,7 +659,8 @@ html {
     width: 100vw;
     height: 100vh;
   }
-  header > ul li button {
+  header > ul li button,
+  header > ul li a {
     display: flex;
     padding-left: 24px;
     align-items: center;
@@ -670,9 +676,11 @@ html {
   }
   header.is-menu-open > ul {
     display: block;
+    z-index: 9998;
   }
   header.is-menu-open .menu-child {
     display: block;
+    z-index: 9999;
   }
   header .header-actions {
     margin-left: auto;
@@ -741,11 +749,15 @@ html {
 }
 @media (min-width: 1200px) {
   header {
+    position: sticky;
+    top: 0;
+    background: white;
     height: 80px;
     display: flex;
     padding: 0 38px;
     align-items: center;
     border-bottom: 1px solid #1a1a1a;
+    z-index: 9999;
   }
   header .rounz-main-logo {
     margin-right: 55px;
@@ -756,6 +768,11 @@ html {
   header ul {
     display: flex;
     gap: 21px;
+  }
+  header ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   header ul li button {
     padding-left: 0px;
@@ -791,6 +808,7 @@ footer {
   flex-direction: column;
   gap: 16px;
   padding: 54px 40px;
+  border-top: solid 1px #eaeaea;
 }
 
 .footer-rounz {

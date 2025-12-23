@@ -1,12 +1,12 @@
 @use "./variable.scss" as *;
 
-main{
+main {
   display: grid;
   width: 100%;
   height: 100%;
   background: $bg;
 }
-.wrapper{
+.wrapper {
   display: flex;
   flex-direction: column;
   width: 700px;
@@ -14,21 +14,21 @@ main{
   padding: 0 50px;
   margin: 0 auto;
   border-bottom: 1px solid $g50;
-  form > h3{
+  form > h3 {
     padding: 27px 0;
   }
 }
-.title{
+.title {
   display: flex;
   flex-direction: column;
   padding: 54px 0 27px 0;
   border-bottom: 1px solid $g50;
-  margin-bottom:27px;
+  margin-bottom: 27px;
   width: 600px;
   text-align: center;
 }
-.kakao{
-  background: #FEE500;
+.kakao {
+  background: #fee500;
   width: 600px;
   height: 70px;
   display: flex;
@@ -36,116 +36,119 @@ main{
   justify-content: space-around;
   padding: 0 100px;
 }
-.formList label{
+.formList label {
   position: relative;
 }
-.formList dd:last-child{
+.formList dd:last-child {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.formList dd:last-child div{
+.formList dd:last-child div {
   width: 200px;
 }
-.formList input{
+.formList input {
   width: 100%;
   height: 64px;
   padding: 12px;
 }
-.formList > dd{
+.formList > dd {
   padding-bottom: 20px;
   position: relative;
-  .sm{
+  .sm {
     position: absolute;
     border: 1px solid $g75;
     border-radius: 4px;
     padding: 8px 12px;
     color: $g100;
-    right:0;
+    right: 0;
     margin: 11px 12px;
   }
 }
-.pw-rule{
-  color:$g100;
+.pw-rule {
+  color: $g100;
 }
-.pw-rule.error{
+.pw-rule.error {
   color: $error;
 }
-.pwHint{
+.pwHint {
   display: none;
 }
-.pwHint.error{
+.pwHint.error {
   display: inline;
   color: $error;
 }
-.red{
+.red {
   color: $error;
 }
-.description{
+.description {
   width: 100%;
   border: 1px solid $g75;
   padding: 0 10px;
   overflow-y: scroll;
   height: 150px;
-  div p{
+  div p {
     color: $g100;
   }
-  div p:first-child{
-    color:$g300;
+  div p:first-child {
+    color: $g300;
   }
 }
-.termsList{
+.termsList {
   border: 1px solid $g75;
-  .top{
+  .top {
     display: flex;
-    gap:10px;
+    gap: 10px;
     padding: 13px 0 12px 20px;
     border-bottom: 1px solid $g75;
   }
-  ul{
+  ul {
     padding: 20px 20px 81px 20px;
-    li{
+    li {
       display: flex;
-      gap:10px;
+      gap: 10px;
       padding-bottom: 20px;
-      label{
-        color:$g200;
+      label {
+        color: $g200;
       }
     }
-    li:last-child{
+    li:last-child {
       padding-bottom: 0;
     }
   }
 }
-.see{
+.see {
   text-decoration: underline;
-  color:$g75;
+  color: $g75;
   margin-left: auto;
 }
-.seeList{
+.seeList {
   display: flex;
   align-items: center;
 }
-.box{
+.termsList input {
+  display: none;
+}
+.box {
   display: inline-block;
   width: 24px;
   height: 24px;
   background: $g50;
   border-radius: 2px;
-  background-image: url('/images/signin/VectorStroke.png');
+  background-image: url("images/signin/VectorStroke.png");
   background-repeat: no-repeat;
   background-position: center;
 }
-.termsList input:checked + .box{
+.termsList input:checked + .box {
   display: inline-block;
   background: $b300;
   width: 24px;
   height: 24px;
-  background-image: url('/images/signin/VectorStrokeOn.png');
+  background-image: url("images/signin/VectorStrokeOn.png");
   background-repeat: no-repeat;
   background-position: center;
 }
-.big{
+.big {
   width: 600px;
   height: 48px;
   color: #fff;
@@ -154,20 +157,22 @@ main{
   margin-bottom: 81px;
 }
 
-@media (max-width:768px){
-  main{
+@media (max-width: 768px) {
+  main {
     display: flex;
     background: none;
   }
-  .wrapper{
+  .wrapper {
     width: 100%;
     height: 100%;
     padding: 0;
-    form{
+    form {
       padding: 16px;
     }
   }
-  .title, .kakao, .big{
+  .title,
+  .kakao,
+  .big {
     width: 100%;
   }
 }

@@ -3,7 +3,9 @@
 /* Text-size styles */
 @media (max-width: 1199px) {
   header {
-    position: relative;
+    position: sticky;
+    top: 0;
+    left: 0;
     display: flex;
     padding: 0 8px 0 23px;
     height: 54px;
@@ -23,6 +25,8 @@
     height: 100vh;
   }
   header > ul li button {
+    position: relative;
+    z-index: 9999;
     display: flex;
     padding-left: 24px;
     align-items: center;

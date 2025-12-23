@@ -1,5 +1,174 @@
 @use "./variable.scss" as *;
 
+// aside 나누기 
+.main-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 1599px) {
+    justify-content: center;
+  }
+}
+// 메인 aside
+.pre-reserv-wrap {
+  position: sticky;
+  top: 0;
+  width: 388px;
+  order: 2;
+  padding: 54px 0;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @media (max-width: 1599px) {
+    display: none;
+  }
+}
+.pre-reserv-box {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.pre-reserv-img {
+  width: 100%;
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+.pre-reserv-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  
+  h3 {
+    color: $g400;
+  }
+  p {
+    margin-top: 12px;
+    color: $g200;
+  }
+  .btn {
+    background: $b300;
+    color: $white;
+  }
+}
+.app-down-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  em {
+    color: $b300;
+  }
+
+  .icon-app-wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+
+    a {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .icon-app {
+      display: inline-flex;
+      width: 16px;
+      height: 16px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: auto 16px;      
+    }
+    .icon-app-ios {
+      background-image: url('../images/app_icon_apple.svg');
+    }
+    .icon-app-and {
+      background-image: url('../images/app_icon_google.svg');
+    }
+  }
+}
+//aside 끝
+
+
+.main-content {
+  padding: 54px 0;
+  width: 1056px;
+  order: 1;
+  border-right: solid 1px $g50;
+  padding-right: calc(150px / 2);
+  @media (max-width: 1599px) {
+    padding-right: 0;
+    border-right: none;
+  }
+}
+
+//카테고리 퀵 버튼
+.main-quick {
+  width: 100%;
+  padding: 54px 0;
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  li {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+  }
+
+  div {
+    width: 100%;
+    height: 0;
+    padding-top: calc(118px / 118px * 100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background: $bg;
+  }
+
+  @each $quick in (glasses, sun, best, low, rvs, lens, cp) {
+    li .icon-cate-#{$quick} {
+      background-image: url('../images/icon_cate_#{$quick}.png');
+      background-size: 80px auto;
+      background-position: center center;
+      background-repeat: no-repeat;
+      transition: background 0.3s;
+    }
+    li:hover .icon-cate-#{$quick} {
+      background-image: url('../images/icon_cate_#{$quick}_hover.png');
+    }
+  }
+  li .icon-cate-face {
+    background-image: url('../images/icon_cate_face.gif');
+    background-size: 80px auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
 /* 메인 슬라이드 */
 .slideItemsWrapper{
   width: 1052px;

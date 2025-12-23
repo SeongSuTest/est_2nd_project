@@ -23,7 +23,7 @@
           <h3 class="h3-tt">세상에 없던 안경 쇼핑</h3>
           <h2 class="h1-tt">라운즈 안경원</h2>
         </div>
-        <div class="store-intro">
+        <ul class="store-intro">
           <li class="store-intro-list">
             <h3 class="h3-tt">어디서나 같은 가격<br>즐거운 안경 쇼핑</h3>
             <p class="body-tt">라운즈 안경원은 온/오프라인 동일한 회원 혜택을 제공합니다.<br>
@@ -56,55 +56,52 @@
             </div>
             <a class="btn btn-line semibold-tt" href=""><span>우리회사 제휴 신청하고 혜택 받기</span><i class="btn-arrow"></i></a>
           </li>
-        </div>
+        </ul>
       </div>
     </section>
 
 
     <section class="store-ct container">
+      <h2 class="visually-hidden">라운즈 안경원 스토어</h2>
       <!-- tab -->
       <div class="store-ct-tab">
-        <div class="store-tab store-tab-rounz menu-tt active">라운즈 안경원 <span>(21)</span></div>
-        <div class="store-tab store-tab-partner menu-tt">파트너 안경원 <span>(1034)</span></div>
+        <div class="store-tab store-tab-direct menu-tt active"><a href="#store-content-rounz">라운즈 안경원<span></span></a>
+        </div>
+        <div class="store-tab store-tab-partner menu-tt"><a href="#store-content-partner">파트너 안경원<span></span></a></div>
       </div>
 
-      
+
       <div class="store-ct-list">
+
         <div class="store-list-head">
-          <div class="rounz-lens">
+          <div>
             <input type="checkbox" id="rounzLens" class="visually-hidden">
             <div class="label-checkbox">
               <label for="rounzLens" class="body-tt">
                 <span class="rounz-lens-chip"><i class="icon-pb-lense"></i>라운즈렌즈</span>맞춤 가능 안경원</label>
             </div>
           </div>
+
+          <!-- 시도 -->
           <div class="rounz-select">
             <label for="sido" class="visually-hidden">시/도를 선택해주세요</label>
             <select name="sido" id="sido">
-              <option value="all" selected>시/도(1034)</option>
-              <option value="gw">광주광역시<span>(1)</span></option>
-              <option value="gg">경기도<span>(9)</span></option>
-              <option value="chn">충청남도<span>(1)</span></option>
-              <option value="sl">서울특별시<span>(5)</span></option>
-              <option value="gw">강원도<span>(1)</span></option>
-              <option value="gb">경상북도<span>(1)</span></option>
-              <option value="ich">인천광역시<span>(1)</span></option>
-              <option value="sj">세종특별자치시<span>(1)</span></option>
+              <option value="" selected>시/도 선택</option>
             </select>
 
+            <!-- 시군구 -->
             <label for="sido" class="visually-hidden">시/군/구를 선택해주세요</label>
             <select name="sigungu" id="sigungu">
-              <option value="all" selected>시/군/구</option>
-              <option value="gw">동구<span>(1)</span></option>
+              <option value="" selected>시/군/구 선택</option>
             </select>
           </div>
 
         </div>
 
         <!-- 라운즈 안경원 -->
-        <div class="store-content store-content-rounz active">
+        <div class="store-content store-content-rounz active" id="store-content-rounz">
           <ul class="store-list">
-            <li>
+            <!-- <li>
               <figure class="store-list-img">
                 <img src="images/store/0782.jpg" alt="라운즈 판교점">
               </figure>
@@ -121,8 +118,16 @@
                   <a href=""><i class="icon-map"></i>지도보기</a>
                 </div>
               </div>
-            </li>
-            <li>
+            </li> -->
+
+
+          </ul>
+        </div>
+
+        <!-- 파트너 안경원 -->
+        <div class="store-content store-partner-rounz" id="store-content-partner">
+          <ul class="store-list">
+            <!-- <li>
               <figure class="store-list-img">
                 <img src="images/store/1006.jpg" alt="라운즈 판교점">
               </figure>
@@ -139,142 +144,86 @@
                   <a href=""><i class="icon-map"></i>지도보기</a>
                 </div>
               </div>
-            </li>
-            <li>
-              <figure class="store-list-img">
-                <img src="images/store/3339.jpg" alt="라운즈 검단법조타운점">
-              </figure>
-              <div class="store-list-box">
-                <div class="store-name">
-                  <h4 class="h4-tt">라운즈 검단법조타운점</h4><span class="rounz-lens-chip small-tt"><i
-                      class="icon-pb-lense"></i>라운즈렌즈</span>
-                </div>
-                <p class="desc-tt">인천1호선 아라역 6번 출구에서 788m</p>
-                <p class="body-tt">인천광역시 서구 서로3로 104 101호 (당하동 사거리 파리바게뜨 건물 1층)</p>
-                <a href="tel:032-710-3339" class="tel-tt">032-710-3339</a>
-                <div class="store-btn">
-                  <a href="tel:032-710-3339" class="body-tt"><i class="icon-call"></i>전화걸기</a>
-                  <a href="" class="body-tt"><i class="icon-map"></i>지도보기</a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <figure class="store-list-img">
-                <img src="images/store/3339.jpg" alt="라운즈 검단법조타운점">
-              </figure>
-              <div class="store-list-box">
-                <div class="store-name">
-                  <h4 class="h4-tt">라운즈 검단법조타운점</h4><span class="rounz-lens-chip small-tt"><i
-                      class="icon-pb-lense"></i>라운즈렌즈</span>
-                </div>
-                <p class="desc-tt">인천1호선 아라역 6번 출구에서 788m</p>
-                <p class="body-tt">인천광역시 서구 서로3로 104 101호 (당하동 사거리 파리바게뜨 건물 1층)</p>
-                <a href="tel:032-710-3339" class="tel-tt">032-710-3339</a>
-                <div class="store-btn">
-                  <a href="tel:032-710-3339" class="body-tt"><i class="icon-call"></i>전화걸기</a>
-                  <a href="" class="body-tt"><i class="icon-map"></i>지도보기</a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <figure class="store-list-img">
-                <img src="images/store/3339.jpg" alt="라운즈 검단법조타운점">
-              </figure>
-              <div class="store-list-box">
-                <div class="store-name">
-                  <h4 class="h4-tt">라운즈 검단법조타운점</h4><span class="rounz-lens-chip small-tt"><i
-                      class="icon-pb-lense"></i>라운즈렌즈</span>
-                </div>
-                <p class="desc-tt">인천1호선 아라역 6번 출구에서 788m</p>
-                <p class="body-tt">인천광역시 서구 서로3로 104 101호 (당하동 사거리 파리바게뜨 건물 1층)</p>
-                <a href="tel:032-710-3339" class="tel-tt">032-710-3339</a>
-                <div class="store-btn">
-                  <a href="tel:032-710-3339" class="body-tt"><i class="icon-call"></i>전화걸기</a>
-                  <a href="" class="body-tt"><i class="icon-map"></i>지도보기</a>
-                </div>
-              </div>
-            </li>
+            </li> -->
+
           </ul>
 
-          <div class="store-page">
-            <button class="store-prev" id="store-prev"></button>
-            <button class="active">1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>4</button>
-            <button>5</button>
-            <button class="store-next" id="store-next"></button>
-          </div>
         </div>
 
-        <!-- 파트너 안경원 -->
-        <div class="store-content store-partner-rounz">
-          <ul class="store-list">
-            <li>
-              <figure class="store-list-img">
-                <img src="images/store/0782.jpg" alt="라운즈 판교점">
-              </figure>
-              <div class="store-list-box">
-                <div class="store-name">
-                  <h4 class="h4-tt">라운즈 판교점</h4><span class="rounz-lens-chip small-tt"><i
-                      class="icon-pb-lense"></i>라운즈렌즈</span>
-                </div>
-                <p class="desc-tt">신분당선,경강선 판교역 1번 출구에서 264m</p>
-                <p class="body-tt">경기도 성남시 분당구 판교역로 192번길 12 1층 (판교역 1번 출구)</p>
-                <a href="tel:031-8061-0782" class="tel-tt">031-8061-0782</a>
-                <div class="store-btn">
-                  <a href="tel:031-8061-0782"><i class="icon-call"></i>전화걸기</a>
-                  <a href=""><i class="icon-map"></i>지도보기</a>
-                </div>
-              </div>
-            </li>
-
-          </ul>
-
-          <div class="store-page">
-            <button class="store-prev" id="store-prev"></button>
-            <button class="active">1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>4</button>
-            <button>5</button>
-            <button class="store-next" id="store-next"></button>
+        <!-- 페이지 -->
+        <div class="store-page">
+          <button class="store-prev" id="store-prev"></button>
+          <div id="numbers">
+            <!-- <button class="active">1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>4</button>
+          <button>5</button> -->
           </div>
+          <button class="store-next" id="store-next"></button>
         </div>
       </div>
-
-
     </section>
 
-
-
-    <section class="store-foot-rounz active">
-      <div class="store-ct-slide">
-        <ul class="store-ct-slide-wrap">
-          <li>
-            <img src="" alt="">
-          </li>
-          <li>
-            <img src="" alt="">
-          </li>
-        </ul>
-        <div class="store-st-">
-          <button>이전</button>
-          <button>다음</button>
+    <section class="store-foot">
+      <h2 class="visually-hidden">안경원 가맹문의 및 소개</h2>
+      <div class="store-foot-direct active">
+        <div class="store-ct-slide-wrap">
+          <div class="store-ct-slide-container">
+            <ul>
+              <li class="animated">
+                <img src="images/store/store_foot_slide1.webp" alt="">
+              </li>
+              <li>
+                <img src="images/store/store_foot_slide2.webp" alt="">
+              </li>
+              <li>
+                <img src="images/store/store_foot_slide3.webp" alt="">
+              </li>
+              <li>
+                <img src="images/store/store_foot_slide4.webp" alt="">
+              </li>
+              <li>
+                <img src="images/store/store_foot_slide5.webp" alt="">
+              </li>
+              <li>
+                <img src="images/store/store_foot_slide6.webp" alt="">
+              </li>
+            </ul>
+          </div>
+          <div class="store-foot-slide-btn">
+            <button id="foot-slide-prevbtn"><span class="visually-hidden">이전</span></button>
+            <button id="foot-slide-nextbtn"><span class="visually-hidden">다음</span></button>
+          </div>
+          <div id="store-foot-pager">
+            <!-- <a class="store-foot-pgBtn" href=""></a> -->
+          </div>
         </div>
-        <div class="stote-ct-bullet">
-          <span></span><span></span><span></span><span></span><span></span>
+        <div class="store-ct-text">
+          <h2 class="h2-tt">안경을 사고 쓰는 일이<br>
+            즐거운 경험을 주는<br>
+            ROUNZ</h2>
+          <div class="store-chain">
+            <h4 class="h4-tt">라운즈 안경원 가맹 점주 모집 중!</h4>
+            <a href="" class="btn">가맹문의<i class="btn-arrow btn-white"></i></a>
+          </div>
         </div>
       </div>
-      <div class="store-ct-text">
-        <h2>안경을 사고 쓰는 일이<br>
-          즐거운 경험을 주는<br>
-          ROUNZ</h2>
-        <div class="store-chain">
-          <p>라운즈 안경원 가맹 점주 모집 중!</p>
-          <a href="">가맹문의<i class="icon-arrow-right">></i></a>
+      <div class="store-foot-partner">
+        <div class="store-ct-img">
+          <img src="images/store/store_foot_partner.png" alt="">
         </div>
+        <div class="store-ct-text">
+          <h4 class="h4-tt">믿을 수 있는 우리 동네 안경원</h4>
+          <h2 class="h2-tt">라운즈 파트너 안경원</h2>
+          <div class="store-chain">
+            <h4 class="h4-tt">라운즈 파트너 안경원이 되고 싶다면?</h4>
+            <a href="" class="btn">제휴문의<i class="btn-arrow btn-white"></i></a>
+          </div>
+        </div>
+
       </div>
+
     </section>
 
   </main>
@@ -282,8 +231,15 @@
   <footer id="footer">
 
   </footer>
+  <script type="module">
+    import { renderHeader } from "./js/modules/header.js";
+    import { renderFooter } from "./js/modules/footer.js";
 
-  <script type="module" src="js/main.js"></script>
+    document.addEventListener("DOMContentLoaded", () => {
+      renderHeader();
+      renderFooter();
+    });
+  </script>
   <script type="module" src="js/store.js"></script>
 </body>
 

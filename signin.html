@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  
+
   <header id="header"></header>
   <main>
     <section class="wrapper">
@@ -39,7 +39,8 @@
             <label for="password">비밀번호 <span class="red">*</span></label>
           </dt>
           <dd>
-            <input type="password" id="password" name="password" placeholder="비밀번호를 입력해주세요." pattern="^(?=.*[A-Za-z])(?=.*\d|.*[!@#$%^&*])[A-Za-\d!@#$%^&*]{8,}$" title="비밀번호를 입력해주세요" required>
+            <input type="password" id="password" name="password" placeholder="비밀번호를 입력해주세요."
+              pattern="^(?=.*[A-Za-z])(?=.*\d|.*[!@#$%^&*])[A-Za-\d!@#$%^&*]{8,}&" title="비밀번호를 입력해주세요" required>
             <p class="desc-tt pw-rule">8자 이상 영문,숫자,특수문자 중 2개 이상 조합으로 입력해주세요.</p>
             <p class="desc-tt pw-rule">4개 이상 연속되거나 동일한 문자/숫자는 사용할 수 없어요.</p>
           </dd>
@@ -47,7 +48,8 @@
             <label for="passwordConfirm">비밀번호 확인 <span class="red">*</span></label>
           </dt>
           <dd>
-            <input type="password" id="passwordConfirm" name="passwordConfirm" placeholder="비밀번호를 한번 더 입력해주세요." title="비밀번호를 한번 더 입력해주세요" required>
+            <input type="password" id="passwordConfirm" name="passwordConfirm" placeholder="비밀번호를 한번 더 입력해주세요."
+              title="비밀번호를 한번 더 입력해주세요" required>
             <p class="desc-tt pwHint" aria-live="polite">비밀번호가 일치하지 않습니다.</p>
           </dd>
           <dt class="menu-tt">
@@ -118,7 +120,8 @@
                 </div>
                 <div>
                   <p>개인정보 수집 및 이용 동의를 거부할 권리</p>
-                  <p>이용자는 개인정보의 수집 및 이용 동의를 거부할 권리가 있습니다. 회원가입 시 수집하는 최소한의 개인정보, 즉 필수 항목에 대한 수집 및 이용 동의를 거부하실 경우, 회원가입이 어려울 수 있습니다.</p>
+                  <p>이용자는 개인정보의 수집 및 이용 동의를 거부할 권리가 있습니다. 회원가입 시 수집하는 최소한의 개인정보, 즉 필수 항목에 대한 수집 및 이용 동의를 거부하실 경우, 회원가입이
+                    어려울 수 있습니다.</p>
                 </div>
               </div>
             </li>
@@ -167,6 +170,7 @@
     </section>
   </main>
   <footer id="footer"></footer>
-  <script type="module" src="/js/signin.js"></script>
+  <script type="module" src="js/signin.js"></script>
 </body>
+
 </html>

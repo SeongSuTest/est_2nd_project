@@ -130,13 +130,13 @@ html {
   border: 0;
 }
 
+/* 12-22 변경 */
 .btn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 4px;
-  height: 48px;
-  line-height: 48px;
+  padding: 16px;
 }
 
 .btn-line {
@@ -147,12 +147,16 @@ html {
 // header
 @media (max-width: 1199px) {
   header {
-    position: relative;
+    // position: relative;
+    position: sticky;
+    top: 0;
+    background: white;
     display: flex;
     padding: 0 8px 0 23px;
     height: 54px;
     align-items: center;
     border-bottom: 1px solid $g500;
+    z-index: 9999;
 
     .rounz-main-logo {
       img {
@@ -169,7 +173,8 @@ html {
       width: 100vw;
       height: 100vh;
       li {
-        button {
+        button,
+        a {
           display: flex;
           padding-left: 24px;
           align-items: center;
@@ -189,9 +194,11 @@ html {
     &.is-menu-open {
       > ul {
         display: block;
+        z-index: 9998;
       }
       .menu-child {
         display: block;
+        z-index: 9999;
       }
     }
 
@@ -270,11 +277,15 @@ html {
 
 @media (min-width: 1200px) {
   header {
+    position: sticky;
+    top: 0;
+    background: white;
     height: 80px;
     display: flex;
     padding: 0 38px;
     align-items: center;
     border-bottom: 1px solid $g500;
+    z-index: 9999;
     .rounz-main-logo {
       margin-right: 55px;
       img {
@@ -285,6 +296,9 @@ html {
       display: flex;
       gap: 21px;
       li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         button {
           padding-left: 0px;
           height: 80px;
@@ -324,6 +338,8 @@ footer {
   flex-direction: column;
   gap: 16px;
   padding: 54px 40px;
+  // border-top 라인 추가 12-22
+  border-top: solid 1px $g50;
 }
 
 .footer-rounz {

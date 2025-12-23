@@ -42,7 +42,8 @@
   margin-top: 20px;
 }
 
-ul {
+.filter-body ul,
+.page-button ul {
   margin-top: 8px;
   display: flex;
   gap: 15px;
@@ -72,13 +73,121 @@ ul {
   color: white;
 }
 
+.total-item {
+  margin-bottom: 10px;
+}
 .total-item span {
   font-weight: 700;
 }
 
 .best-items ul {
   display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px 15px;
+  margin-top: 0;
+}
+@media (max-width: 1600px) {
+  .best-items ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .best-items ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .best-items ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .best-items li {
-  width: 254px;
+  width: auto;
+}
+.best-items li .item-image {
+  position: relative;
+}
+.best-items li .item-image > img {
+  width: 100%;
+}
+.best-items li .item-brand {
+  color: #848484;
+}
+.best-items li h3 {
+  color: #1e1e1e;
+}
+.best-items li .item-price span {
+  color: #ff2d2d;
+  margin-right: 8px;
+}
+.best-items li .best-store-button {
+  display: inline-block;
+  margin-top: 16px;
+  border-radius: 4px;
+  background: #f4f4fa;
+  padding: 0 8px;
+  color: #0007b2;
+}
+.best-items li .like-button {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+}
+
+.page-button {
+  margin-top: 24px;
+  margin-bottom: 20px;
+}
+.page-button ul {
+  justify-content: center;
+  align-items: center;
+}
+.page-button button {
+  min-width: 36px;
+  height: 36px;
+  background: #fff;
+  color: #1e1e1e;
+}
+.page-button button.active {
+  color: white;
+  background: #0007b2;
+  border-radius: 18px;
+}
+.page-button button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+@media (max-width: 1200px) {
+  h2 {
+    display: none;
+  }
+  .container {
+    padding-top: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .mobile-container {
+    max-width: 1592px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  .filter-button {
+    padding: 12px 18px;
+    border: 1px solid #848484;
+    border-radius: 4px;
+    color: #848484;
+  }
+  .best-items li .item-brand {
+    font-size: 12px;
+  }
+  .best-items li h3 {
+    font-size: 15px;
+  }
+  .best-items li .item-price {
+    font-size: 18px;
+  }
+  .best-items li a {
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=best.css.map */
