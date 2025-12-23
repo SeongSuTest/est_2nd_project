@@ -175,7 +175,6 @@
   display: grid;
   overflow: hidden;
   grid-template-columns: 252px 1fr;
-  gap:16px;
   border-bottom: 1px solid $g50;
   margin-bottom: 54px;
   div{
@@ -184,10 +183,10 @@
       margin-bottom: 27px;
     }
   }
-  button{
-    color:$b300;
-    padding-right: 10px;
-  }
+}
+aside a{
+  color:$b300;
+  padding-right: 10px;
 }
 .slideItemsWrapper:last-child{
   border-bottom: 0;
@@ -196,7 +195,7 @@
 .slide-wrapper{
   width: 100%;
   overflow: hidden;
-  height: 465px;
+  padding-bottom: 54px;
 }
 .slideItems{
   width: 100%;
@@ -230,7 +229,23 @@
 .sale{
   color: $error;
 }
+/* 스와이퍼 */
 .swiper {
   width: 100%;
+  height: 100%;
+}
+.swiper-slide{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-slide a{
+  height: 100%;
+}
+.swiper-slide img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 /*  메인 슬라이드 끝  */

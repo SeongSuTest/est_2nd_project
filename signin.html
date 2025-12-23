@@ -32,7 +32,7 @@
             <label for="userId">아이디 <span class="red">*</span></label>
           </dt>
           <dd>
-            <input type="text" id="userId" name="userId" placeholder="영문/숫자로 4자 이상." title="영문/숫자로 4자 이상" required>
+            <input type="text" id="userId" name="userId" placeholder="영문/숫자로 4자 이상." pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{4,}$" title="영문/숫자로 4자 이상" required>
             <button type="button" class="sm check desc-tt">중복확인</button>
           </dd>
           <dt class="menu-tt">
@@ -56,7 +56,7 @@
             <label for="tel">휴대전화번호 <span class="red">*</span></label>
           </dt>
           <dd>
-            <input type="tel" id="tel" name="tel" placeholder="휴대전화 번호를 입력해주세요." title="휴대전화 번호를 입력해주세요" required>
+            <input type="tel" id="tel" name="tel" placeholder="휴대전화 번호를 입력해주세요." pattern="^\d+$" title="휴대전화 번호를 입력해주세요" required>
             <button type="button" class="sm certify desc-tt">인증</button>
           </dd>
           <dt class="menu-tt">
@@ -70,36 +70,36 @@
           </dt>
           <dd>
             <div>
-              <input type="text" id="year" name="year" placeholder="년 (4자리)" title="년 (4자리)">
+              <input type="text" id="year" name="year" placeholder="년 (4자리)" pattern="^(?=.*\d)[\d]+$" title="년 (숫자 4자리)">
             </div>
             <div>
-              <input type="text" id="month" name="month" placeholder="월" title="월">
+              <input type="text" id="month" name="month" placeholder="월" pattern="^(?=.*\d)[\d]+$"title="월">
             </div>
             <div>
-              <input type="text" id="day" name="day" placeholder="일" title="일">
+              <input type="text" id="day" name="day" placeholder="일" pattern="^(?=.*\d)[\d]+$"title="일">
             </div>
           </dd>
         </dl>
         <div class="termsList">
           <div class="top">
-            <input type="checkbox" id="agreeAll" name="agreeAll">
+            <input type="checkbox" id="agreeAll" name="agreeAll" class=" visually-hidden">
             <span class="box active"></span>
             <label for="agreeAll" class="h4-tt">전체동의</label>
           </div>
           <ul>
             <li>
-              <input type="checkbox" id="age" name="age" required>
+              <input type="checkbox" id="age" name="age" class=" visually-hidden" required>
               <span class="box"></span>
               <label for="age" class="body2-tt">14세 이상입니다 (필수)</label>
             </li>
             <li class="seeList">
-              <input type="checkbox" id="terms" name="terms" required>
+              <input type="checkbox" id="terms" name="terms" class=" visually-hidden" required>
               <span class="box"></span>
               <label for="terms" class="body2-tt">이용약관 동의 (필수)</label>
               <a href="" class="body2-tt see">보기</a>
             </li>
             <li>
-              <input type="checkbox" id="ind" name="ind" required>
+              <input type="checkbox" id="ind" name="ind" class=" visually-hidden" required>
               <span class="box"></span>
               <label for="ind" class="body2-tt">개인정보 수집 및 이용동의 (필수)</label>
             </li>
@@ -126,13 +126,13 @@
               </div>
             </li>
             <li class="seeList">
-              <input type="checkbox" id="ano" name="ano" required>
+              <input type="checkbox" id="ano" name="ano" class=" visually-hidden" required>
               <span class="box"></span>
               <label for="ano" class="body2-tt">개인정보 제3자 제공 동의 (필수)</label>
               <a href="" class="body2-tt see">보기</a>
             </li>
             <li>
-              <input type="checkbox" id="cho" name="cho">
+              <input type="checkbox" id="cho" name="cho" class=" visually-hidden">
               <span class="box"></span>
               <label for="cho" class="body2-tt">선택정보 수집 및 이용동의 (선택)</label>
             </li>
@@ -154,12 +154,12 @@
               </div>
             </li>
             <li>
-              <input type="checkbox" id="sms" name="sms">
+              <input type="checkbox" id="sms" name="sms" class=" visually-hidden">
               <span class="box"></span>
               <label for="sms" class="body2-tt">SMS 정보 수신</label>
             </li>
             <li>
-              <input type="checkbox" id="info" name="info">
+              <input type="checkbox" id="info" name="info" class=" visually-hidden">
               <span class="box"></span>
               <label for="info" class="body2-tt">이메일 정보 수신</label>
             </li>
