@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       return `
           <li>
-            <a>
+            <a href="./info.html">
               <div class="item-image">
                 <img src="${p.image}" alt="${p.title}" width="254"/>
                 <div class="like-button">
