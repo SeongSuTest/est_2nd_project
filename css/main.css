@@ -112,6 +112,55 @@
   }
 }
 
+.slide-banner {
+  width: 1056px;
+  max-height: 406px;
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 1600px) {
+  .slide-banner {
+    width: 980px;
+  }
+}
+.slide-banner .swiper-wrapper,
+.slide-banner .swiper-slide {
+  height: 100%;
+}
+.slide-banner .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 25%;
+     object-position: 50% 25%;
+}
+.slide-banner .swiper-pagination {
+  left: auto;
+  right: 12px;
+  bottom: 12px;
+  width: auto;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: white;
+  color: black;
+  font-size: 14px;
+  line-height: 1;
+}
+.slide-banner .swiper-button-prev,
+.slide-banner .swiper-button-next {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  color: #fff;
+}
+.slide-banner .swiper-button-prev::after,
+.slide-banner .swiper-button-next::after {
+  font-size: 16px;
+  font-weight: 700;
+}
+
 .main-quick {
   width: 100%;
   padding: 54px 0;
@@ -241,6 +290,11 @@
 .slideItemsWrapper div p {
   margin-bottom: 27px;
 }
+@media (min-width: 1600px) {
+  .slideItemsWrapper {
+    width: 980px;
+  }
+}
 
 aside a {
   color: #0007b2;
@@ -316,7 +370,8 @@ aside a {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /*  메인 슬라이드 끝  *//*# sourceMappingURL=main.css.map */

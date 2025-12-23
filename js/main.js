@@ -7,58 +7,57 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /*  슬라이드  */
-const swiper = new Swiper('.swiper', {
-  direction: 'horizontal',
+const swiper = new Swiper(".swiper", {
+  direction: "horizontal",
   loop: true,
   autoplay: {
     delay: 4000,
-    pauseOnMouseEnter:true,
+    pauseOnMouseEnter: true,
   },
   slidesPerView: 3,
   spaceBetween: 16,
   breakpoints: {
-    480: {slidesPerView: 2},
-    768: {slidesPerView: 3},
+    480: { slidesPerView: 2 },
+    768: { slidesPerView: 3 },
   },
 });
 
-const slideWrap = document.querySelector('.slideItemsWrapper');
-const slideItems = slideWrap.querySelector('.slideItems');
-const glassEl = document.querySelector('#glassList');
-const sunglassEl = document.querySelector('#sunglassList');
-const saleEl = document.querySelector('#saleList');
+const slideWrap = document.querySelector(".slideItemsWrapper");
+const slideItems = slideWrap.querySelector(".slideItems");
+const glassEl = document.querySelector("#glassList");
+const sunglassEl = document.querySelector("#sunglassList");
+const saleEl = document.querySelector("#saleList");
 
 let listData = [];
 
-fetch('/data/main-slide-item.json')
-  .then(res=>res.json())
-  .then(result=>{
+fetch("/data/main-slide-item.json")
+  .then((res) => res.json())
+  .then((result) => {
     const products = result.mainProducts;
     console.log(result);
 
     renderList(
-      products.filter(p => p.category === 'glass'),
+      products.filter((p) => p.category === "glass"),
       glassEl
     );
     renderList(
-      products.filter(p => p.category === 'sunglass'),
+      products.filter((p) => p.category === "sunglass"),
       sunglassEl
     );
     renderList(
-      products.filter(p => p.category === 'sale'),
+      products.filter((p) => p.category === "sale"),
       saleEl
     );
-  })
+  });
 
-function renderList(data, target){
-  let HTML = '';
+function renderList(data, target) {
+  let HTML = "";
 
-  data.forEach(p=>{
-  const price = p.price.toLocaleString();
+  data.forEach((p) => {
+    const price = p.price.toLocaleString();
 
-    HTML +=
-    `<li class="swiper-slide">
-      <a href="#">
+    HTML += `<li class="swiper-slide">
+      <a href="./info.html">
         <div class="thumb">
           <img src="${p.image}" alt="${p.title}">
         </div>
@@ -66,11 +65,7 @@ function renderList(data, target){
           <dt class="desc-tt">${p.brand}</dt>
           <dd class="body-tt">${p.title}</dd>
           <dd>
-            ${
-              p.discountPercent > 0
-                ? `<span class="h4-tt">${p.discountPercent}%</span>`
-                : ``
-            }
+            ${p.discountPercent > 0 ? `<span class="h4-tt">${p.discountPercent}%</span>` : ``}
             <p class="h4-tt">${price}원</p>
           </dd>
         </dl>
@@ -79,4 +74,31 @@ function renderList(data, target){
   });
   target.innerHTML = HTML;
 }
-  /* 슬라이드 끝 */
+/* 슬라이드 끝 */
+
+// 슬라이드 배너
+const bannerEl = document.querySelector(".mainBannerSwiper");
+
+if (bannerEl) {
+  const bannerSwiper = new Swiper(".mainBannerSwiper", {
+    loop: true,
+    speed: 600,
+
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+
+    pagination: {
+      el: ".mainBannerSwiper .swiper-pagination",
+      type: "fraction",
+      renderFraction: (currentClass, totalClass) => `<span class="${currentClass}"></span>/<span class="${totalClass}"></span>`,
+    },
+
+    navigation: {
+      nextEl: ".mainBannerSwiper .swiper-button-next",
+      prevEl: ".mainBannerSwiper .swiper-button-prev",
+    },
+  });
+}
