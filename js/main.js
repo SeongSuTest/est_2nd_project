@@ -79,8 +79,4 @@ function renderList(data, target){
   });
   target.innerHTML = HTML;
 }
-
-
-
-  
   /* 슬라이드 끝 */
